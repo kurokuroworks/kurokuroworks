@@ -1,0 +1,30 @@
+{
+  "name": "kurokuroworks",
+  "version": "1.0.0",
+  "description": "www.kurokuroworks.net",
+  "author": "nanocloudx <nanocloudx@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --fix --ext .js,.vue .",
+    "publish": "npm run generate && git reset . && git add ./docs/ && git commit -m \"publish\" && git push && echo 'published!'"
+  },
+  "pre-commit": ["lint"],
+  "dependencies": {
+    "nuxt": "latest"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
+  }
+}
