@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import request from 'superagent'
 import ItemParts from '~components/parts/item.vue'
 export default {
   components: {

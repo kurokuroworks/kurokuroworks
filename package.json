@@ -12,9 +12,12 @@
     "lint": "eslint --fix --ext .js,.vue .",
     "publish": "npm run generate && git reset . && git add ./docs/ && git commit -m \"publish\" && git push && echo 'published!'"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
