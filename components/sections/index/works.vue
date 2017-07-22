@@ -32,3 +32,9 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .works {
+
+  }
+</style>

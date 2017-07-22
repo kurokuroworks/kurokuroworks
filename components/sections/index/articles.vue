@@ -32,3 +32,9 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .articles {
+
+  }
+</style>

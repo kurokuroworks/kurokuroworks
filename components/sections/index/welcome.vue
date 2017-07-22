@@ -7,3 +7,9 @@
     </div>
   </section>
 </template>
+
+<style lang="scss">
+  .welcome {
+
+  }
+</style>
