@@ -3,28 +3,32 @@
     <div class="container">
       <h2 class="section-title">つくったもの</h2>
       <ul>
-        <item-parts
-          :type="'work'"
-          :href="'#'"
-          :thumbnail="'#'"
-          :title="'たいとる'"
-          :meta="'めためためためた'"
-          :description="'せつめいぶんせつめいぶんせつめいぶん'"
-        ></item-parts>
+        <template v-for="item in worksData">
+          <item-parts
+            :type="'work'"
+            :href="item.href"
+            :thumbnail="item.thumbnail"
+            :title="item.title"
+            :meta="item.meta"
+            :description="item.description"
+          ></item-parts>
+        </template>
       </ul>
     </div>
   </section>
 </template>
 
 <script>
-import request from 'superagent'
-import ItemParts from '~components/parts/item.vue'
-export default {
-  components: {
-    ItemParts
-  },
-  mounted() {
-
+  import worksData from '~assets/data/works.json'
+  import ItemParts from '~components/parts/item.vue'
+  export default {
+    components: {
+      ItemParts
+    },
+    data() {
+      return {
+        worksData
+      }
+    }
   }
-}
 </script>
