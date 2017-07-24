@@ -16,6 +16,7 @@
     "lint"
   ],
   "dependencies": {
+    "marked": "^0.3.6",
     "nuxt": "latest",
     "superagent": "^3.5.2"
   },

@@ -33,12 +33,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: [
+      'superagent',
+      'marked'
+    ]
   },
   generate: {
     dir: 'docs'
-  },
-  build: {
-    vendor: ['superagent']
   }
 }
