@@ -7,6 +7,7 @@
     <ArticlesSection />
     <AboutsSection />
     <FooterSection />
+    <nuxt-link to="/articles/example">aaa</nuxt-link>
   </div>
 </template>
 

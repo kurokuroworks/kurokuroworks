@@ -39,7 +39,14 @@ module.exports = {
       'marked'
     ]
   },
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    staticBaseUrl: 'https://static.kurokuroworks.net'
+  },
   generate: {
-    dir: 'docs'
+    dir: 'docs',
+    routes: () => {
+      return ['/articles/example']
+    }
   }
 }
