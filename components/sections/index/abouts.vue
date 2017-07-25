@@ -11,7 +11,6 @@
         <ul>
           <item-parts
             :type="'member'"
-            :href="'#'"
             :thumbnail="'#'"
             :title="'たいとる'"
             :meta="'めためためためた'"

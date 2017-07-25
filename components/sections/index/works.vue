@@ -6,6 +6,7 @@
         <template v-for="item in data">
           <item-parts
             :type="'work'"
+            :id="item.id"
             :href="item.href"
             :thumbnail="item.thumbnail"
             :title="item.title"
