@@ -1,3 +1,5 @@
+const request = require('superagent')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -46,7 +48,11 @@ module.exports = {
   generate: {
     dir: 'docs',
     routes: () => {
-      return ['/articles/example']
+      return request.get('https://static.kurokuroworks.net/www/articles.json').then(res => {
+        return res.body.map(item => {
+          return `/articles/${item.id}`
+        })
+      })
     }
   }
 }

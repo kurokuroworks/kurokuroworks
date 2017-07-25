@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="section-title">にっき</h2>
       <ul>
-        <template v-for="item in articlesData">
+        <template v-for="item in data">
           <item-parts
             :type="'article'"
             :href="item.href"
@@ -19,16 +19,11 @@
 </template>
 
 <script>
-  import articlesData from '~assets/data/articles.json'
   import ItemParts from '~components/parts/item.vue'
   export default {
+    props: ['data'],
     components: {
       ItemParts
-    },
-    data() {
-      return {
-        articlesData
-      }
     }
   }
 </script>

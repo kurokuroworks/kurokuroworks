@@ -1,11 +1,11 @@
 <template>
   <li class="item-parts" :class="type">
-    <a :href="href">
+    <nuxt-link :to="href">
       <img class="thumbnail" :src="thumbnail">
       <h3 class="title">{{title}}</h3>
       <p class="meta">{{meta}}</p>
       <p class="description">{{description}}</p>
-    </a>
+    </nuxt-link>
   </li>
 </template>
 

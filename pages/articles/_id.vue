@@ -9,24 +9,35 @@
 <script>
   import request from 'superagent'
   import marked from 'marked'
-  import articles from '~assets/data/articles.json'
   export default {
-    validate({ params }) {
-      // assets/static/articles に存在する id と一致しない場合は 404
+    validate(context) {
+      let articles
+      if (context.isClient && sessionStorage) {
+        articles = JSON.parse(sessionStorage.getItem(`articlesData`))
+      }
+      // 記事一覧が sessionStorage に無ければチェックしない
+      // (直接リンクやGooglebot相手なら事前レンダリング結果で404を返せるのでチェック不要）
+      if (!articles) {
+        return true
+      }
+      // articles に存在する id と一致しない場合は 404
       return !!articles.find(item => {
-        return item.id === params.id
+        return item.id === context.params.id
       })
     },
-    async asyncData (context) {
-      // NOTICE
-      // static のリソースを更新した時は事前レンダリングしたHTMLも更新する必要がある。
-      // Nuxt.js の事前レンダリングは非同期で取得した内容を書き込んでいるので、リソース側が更新されても反映されないのが原因。
-      // 直接リンクから遷移する場合や、GoogleBotからのアクセスの場合に表示内容が古いままとなってしまうので注意。
-      // (きっとなんかいい方法があると思うけど初回アクセス時の速度を考えたらトレードオフな気もする)
-
-      // markdown を取得して HTML にレンダリングして出力
-      let { text } = await request.get(`${context.env.staticBaseUrl}/articles/${context.params.id}.md`)
-      return { content: marked(text) }
+    asyncData(context) {
+      let article
+      if (context.isClient && sessionStorage) {
+        article = sessionStorage.getItem(`articles/${context.params.id}`)
+      }
+      return Promise.resolve().then(() => {
+        return article ? article : request.get(`${context.env.staticBaseUrl}/www/articles/${context.params.id}.md`).then(res => res.text)
+      }).then((res) => {
+        if (context.isClient && sessionStorage) {
+          if (!article) sessionStorage.setItem(`articles/${context.params.id}`, res)
+        }
+        return { content: marked(res) }
+      })
     },
     data() {
       return {
