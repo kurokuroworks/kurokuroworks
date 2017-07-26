@@ -8,7 +8,7 @@
       </div>
       <div>
         <h3>なかのひと</h3>
-        <ul>
+        <ul class="item-container">
           <item-parts
             :type="'member'"
             :thumbnail="'#'"

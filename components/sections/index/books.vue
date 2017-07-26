@@ -2,7 +2,7 @@
   <section class="books">
     <div class="container">
       <h2 class="section-title">かいたもの</h2>
-      <ul>
+      <ul class="item-container">
         <template v-for="item in data">
           <item-parts
             :type="'book'"
