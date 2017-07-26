@@ -15,7 +15,7 @@
     mounted() {
       if (window) {
         window.addEventListener('scroll', throttle(() => {
-          this.isVisible = window.innerHeight - 50 < window.pageYOffset
+          this.isVisible = window.innerHeight - 20 < window.pageYOffset
         }, 100))
       }
     },
@@ -31,12 +31,11 @@
     top: -50px;
     left: 0;
     right: 0;
-    padding: 5px;
+    padding: 10px;
     color: #ffffff;
-    background-color: #333333;
+    background-color: rgba(0,0,0,0.8);
     text-align: center;
     transition-duration: .3s;
-    transition-timing-function: ease-in-out;
     &.is-visible {
       top: 0;
     }
