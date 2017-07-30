@@ -29,9 +29,10 @@
   .section-title {
     font-size: 28px;
     font-weight: bold;
-    padding: 40px 0 30px;
+    padding: 40px 10px 10px;
     span {
-      font-size: 12px;
+      font-size: 13px;
+      padding-left: 5px;
     }
   }
 </style>

@@ -7,6 +7,9 @@
 
 <style lang="scss">
   footer {
-
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #555555;
+    color: #ffffff;
   }
 </style>

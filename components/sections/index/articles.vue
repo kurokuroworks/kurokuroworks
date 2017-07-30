@@ -8,7 +8,6 @@
             :type="'article'"
             :id="item.id"
             :href="item.href"
-            :thumbnail="item.thumbnail"
             :title="item.title"
             :meta="item.meta"
             :description="item.description"

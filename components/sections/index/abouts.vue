@@ -12,9 +12,16 @@
           <item-parts
             :type="'member'"
             :thumbnail="'#'"
-            :title="'たいとる'"
-            :meta="'めためためためた'"
-            :description="'せつめいぶんせつめいぶんせつめいぶん'"
+            :title="'なのくろ'"
+            :meta="'フロントエンドエンジニア'"
+            :description="'あたまがよわい'"
+          ></item-parts>
+          <item-parts
+            :type="'member'"
+            :thumbnail="'#'"
+            :title="'黒曜'"
+            :meta="'バックエンドエンジニア'"
+            :description="'あたまがつよい'"
           ></item-parts>
         </ul>
       </div>
@@ -33,6 +40,13 @@ export default {
 
 <style lang="scss">
   .abouts {
-
+    .item-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .item-parts {
+      width: 50%;
+      padding: 10px;
+    }
   }
 </style>
