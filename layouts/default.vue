@@ -20,10 +20,11 @@
     font-family: 'Noto Sans Japanese', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #333333;
+    color: #555555;
     background-color: #f5f5f5;
+    font-size: 13px;
     a {
-      color: #333333;
+      color: #555555;
     }
   }
   section {
@@ -34,7 +35,7 @@
     background-size: contain;
     .section-title {
       color: #ffffff;
-      padding: 120px 20px 0;
+      padding: 130px 20px 0;
     }
   }
   .section-title {

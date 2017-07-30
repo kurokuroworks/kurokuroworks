@@ -65,9 +65,13 @@
       padding: 1px 0 4px;
       font-weight: bold;
     }
+    .meta {
+      color: #417793;
+    }
+    .description {
+      color: #777777;
+    }
     .meta, .description {
-      color: #555555;
-      font-size: 12px;
       line-height: 14px;
       padding-bottom: 2px;
     }
