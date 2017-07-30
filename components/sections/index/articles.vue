@@ -13,6 +13,11 @@
             :description="item.description"
           ></item-parts>
         </template>
+        <item-parts
+          :type="'article'"
+          :title="'まだありません'"
+          :description="'公開までしばらくおまちください'"
+        ></item-parts>
       </ul>
     </div>
   </section>
