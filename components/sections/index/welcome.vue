@@ -5,8 +5,7 @@
         <img src="~assets/images/dummy.png">
       </div>
       <div class="title">
-        <h1>くろくろわーくす</h1>
-        <p>kurokuroworks</p>
+        <h1><img src="~assets/images/logo.png" /></h1>
       </div>
     </div>
   </section>
@@ -26,15 +25,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-image: url("~assets/images/background.png");
     .title {
       text-align: center;
       h1, p {
         padding: 2px 8px;
       }
       h1 {
-        font-size: 28px;
-        line-height: 28px;
+        img {
+          display: block;
+          width: 250px;
+        }
       }
     }
   }

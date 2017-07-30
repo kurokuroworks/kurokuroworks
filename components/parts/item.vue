@@ -62,7 +62,7 @@
     .title {
       font-size: 17px;
       line-height: 18px;
-      padding-bottom: 4px;
+      padding: 1px 0 4px;
       font-weight: bold;
     }
     .meta, .description {

@@ -1,13 +1,15 @@
 <template>
-  <section class="abouts">
+  <section class="abouts cover">
     <div class="container">
       <h2 class="section-title">About<span>サークルについて</span></h2>
-      <div>
-        <h3>"かわいい"をつくっています</h3>
-        <p>サークルしょうかいサークルしょうかいサークルしょうかい</p>
+      <div class="about">
+        <h3>「かわいい！」を作ります</h3>
+        <p>"くろくろわーくす"は、なのくろと黒曜の技術系サークルです。</p>
+        <p>Web開発、Androidアプリ開発、技術書の執筆、デザイン、映像制作など多分野で雑多に活動しています。</p>
+        <p>サークルの目標は「かわいい！」を作ることです。かわいいは正義ですので、かわいいと思うものを技術を無駄遣いして作っていきたいと思っています。</p>
       </div>
-      <div>
-        <h3>なかのひと</h3>
+      <div class="staff">
+        <h3 class="subtitle">なかのひと</h3>
         <ul class="item-container">
           <template v-for="item in data">
             <item-parts
@@ -37,6 +39,30 @@
 
 <style lang="scss">
   .abouts {
+    &.cover {
+      background-image: url("~assets/images/galaxy.jpg");
+    }
+    .about {
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      background-color: #ffffff;
+      margin: 10px 20px;
+      padding: 10px;
+      h3 {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 8px;
+        font-weight: bold;
+        text-align: center;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    .subtitle {
+      padding: 20px 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
     .item-parts {
       width: 50%;
       padding: 10px;
