@@ -46,7 +46,8 @@
     .block {
       width: 100%;
       background-color: #ffffff;
-      border: 1px solid #f0f0f0;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      margin-bottom: 1px;
     }
     a {
       text-decoration: none;
@@ -60,10 +61,15 @@
     }
     .title {
       font-size: 17px;
+      line-height: 18px;
+      padding-bottom: 4px;
       font-weight: bold;
     }
     .meta, .description {
+      color: #555555;
       font-size: 12px;
+      line-height: 14px;
+      padding-bottom: 2px;
     }
   }
 </style>

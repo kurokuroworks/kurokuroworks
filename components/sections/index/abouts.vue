@@ -9,20 +9,16 @@
       <div>
         <h3>なかのひと</h3>
         <ul class="item-container">
-          <item-parts
-            :type="'member'"
-            :thumbnail="'#'"
-            :title="'なのくろ'"
-            :meta="'フロントエンドエンジニア'"
-            :description="'あたまがよわい'"
-          ></item-parts>
-          <item-parts
-            :type="'member'"
-            :thumbnail="'#'"
-            :title="'黒曜'"
-            :meta="'バックエンドエンジニア'"
-            :description="'あたまがつよい'"
-          ></item-parts>
+          <template v-for="item in data">
+            <item-parts
+              :type="'abouts'"
+              :href="item.href"
+              :thumbnail="item.thumbnail"
+              :title="item.title"
+              :meta="item.meta"
+              :description="item.description"
+            ></item-parts>
+          </template>
         </ul>
       </div>
     </div>
@@ -30,20 +26,17 @@
 </template>
 
 <script>
-import ItemParts from '~components/parts/item.vue'
-export default {
-  components: {
-    ItemParts
+  import ItemParts from '~components/parts/item.vue'
+  export default {
+    props: ['data'],
+    components: {
+      ItemParts
+    }
   }
-}
 </script>
 
 <style lang="scss">
   .abouts {
-    .item-container {
-      display: flex;
-      flex-wrap: wrap;
-    }
     .item-parts {
       width: 50%;
       padding: 10px;

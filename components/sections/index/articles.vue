@@ -34,8 +34,6 @@
       background-image: url("~assets/images/galaxy.jpg");
     }
     .item-container {
-      display: flex;
-      flex-wrap: wrap;
       padding: 10px;
     }
     .item-parts {

@@ -3,22 +3,22 @@
   "all": [
     "img/galaxy.ad0fa63.jpg",
     "img/dummy.67ad6e3.png",
-    "0.nuxt.bundle.8a105fa44a202195eda4.js",
-    "1.nuxt.bundle.476aa060e6fe8094150b.js",
+    "0.nuxt.bundle.4996123dcd9113001f55.js",
+    "1.nuxt.bundle.4a92e16a007cf0f41a32.js",
     "2.nuxt.bundle.2969b8cd2686630802bb.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js",
-    "manifest.225bf8005ad0b2384df2.js",
+    "manifest.6fe50c48996d636b9ca8.js",
     "index.html"
   ],
   "initial": [
-    "manifest.225bf8005ad0b2384df2.js",
+    "manifest.6fe50c48996d636b9ca8.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js"
   ],
   "async": [
-    "0.nuxt.bundle.8a105fa44a202195eda4.js",
-    "1.nuxt.bundle.476aa060e6fe8094150b.js",
+    "0.nuxt.bundle.4996123dcd9113001f55.js",
+    "1.nuxt.bundle.4a92e16a007cf0f41a32.js",
     "2.nuxt.bundle.2969b8cd2686630802bb.js"
   ],
   "modules": {

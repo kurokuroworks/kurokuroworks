@@ -21,7 +21,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #333333;
-    background-color: rgb(250,250,250);
+    background-color: #f5f5f5;
     a {
       color: #333333;
     }
@@ -31,7 +31,7 @@
     background-size: contain;
     .section-title {
       color: #ffffff;
-      padding: 100px 20px 0;
+      padding: 120px 20px 0;
     }
   }
   .section-title {
@@ -42,5 +42,10 @@
       font-size: 13px;
       padding-left: 5px;
     }
+  }
+  .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
   }
 </style>
