@@ -20,6 +20,7 @@
 
 <style lang="scss">
   .welcome {
+    margin: 0;
     height: 90vh;
     overflow: hidden;
     display: flex;

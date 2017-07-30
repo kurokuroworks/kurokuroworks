@@ -26,6 +26,9 @@
       color: #333333;
     }
   }
+  section {
+    margin-bottom: 50px;
+  }
   .cover {
     background-repeat: no-repeat;
     background-size: contain;
@@ -37,7 +40,7 @@
   .section-title {
     font-size: 28px;
     font-weight: bold;
-    padding: 50px 20px 0;
+    padding: 0 20px;
     span {
       font-size: 13px;
       padding-left: 5px;
