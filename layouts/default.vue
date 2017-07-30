@@ -10,6 +10,11 @@
   export default {
     components: {
       ResetParts
+    },
+    mounted() {
+      window.kurokuroworks = function() {
+        console.log('にゃーん！') // eslint-disable-line
+      }
     }
   }
 </script>

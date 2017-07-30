@@ -9,21 +9,21 @@
     "img/cover_works.6833b5e.jpg",
     "img/logo_white.8eff58f.png",
     "img/chloe.67ad6e3.png",
-    "1.nuxt.bundle.d3ff46d00801d196be20.js",
+    "1.nuxt.bundle.67ebc2b6e69b684b2005.js",
     "2.nuxt.bundle.d114f90cf4305bdd495a.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js",
-    "manifest.63a411f135a08cb03b6e.js",
+    "manifest.0cbe04a357991fef6c3d.js",
     "index.html"
   ],
   "initial": [
-    "manifest.63a411f135a08cb03b6e.js",
+    "manifest.0cbe04a357991fef6c3d.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js"
   ],
   "async": [
     "0.nuxt.bundle.71bf6bba65b68798d400.js",
-    "1.nuxt.bundle.d3ff46d00801d196be20.js",
+    "1.nuxt.bundle.67ebc2b6e69b684b2005.js",
     "2.nuxt.bundle.d114f90cf4305bdd495a.js"
   ],
   "modules": {
