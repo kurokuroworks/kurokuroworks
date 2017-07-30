@@ -1,7 +1,7 @@
 <template>
   <section class="works">
     <div class="container">
-      <h2 class="section-title">つくったもの</h2>
+      <h2 class="section-title">Works<span>公開中のアプリ</span></h2>
       <ul class="item-container">
         <template v-for="item in data">
           <item-parts
@@ -34,10 +34,9 @@
     .item-container {
       display: flex;
       flex-wrap: wrap;
-      .item-parts {
-        width: 100%;
-        padding: 10px;
-      }
+    }
+    .item-parts {
+      width: 100%;
     }
   }
 </style>

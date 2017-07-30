@@ -1,7 +1,7 @@
 <template>
   <section class="articles">
     <div class="container">
-      <h2 class="section-title">にっき</h2>
+      <h2 class="section-title">Articles<span>記事・ブログ</span></h2>
       <ul class="item-container">
         <template v-for="item in data">
           <item-parts

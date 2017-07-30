@@ -1,7 +1,7 @@
 <template>
   <section class="books">
     <div class="container">
-      <h2 class="section-title">かいたもの</h2>
+      <h2 class="section-title">Books<span>書籍・同人誌</span></h2>
       <ul class="item-container">
         <template v-for="item in data">
           <item-parts
@@ -31,6 +31,13 @@
 
 <style lang="scss">
   .books {
-
+    .item-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .item-parts {
+      width: 50%;
+      padding: 10px;
+    }
   }
 </style>

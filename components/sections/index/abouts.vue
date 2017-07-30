@@ -1,7 +1,7 @@
 <template>
   <section class="abouts">
     <div class="container">
-      <h2 class="section-title">サークルについて</h2>
+      <h2 class="section-title">About<span>サークルについて</span></h2>
       <div>
         <h3>"かわいい"をつくっています</h3>
         <p>サークルしょうかいサークルしょうかいサークルしょうかい</p>

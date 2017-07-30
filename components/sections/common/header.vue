@@ -34,7 +34,7 @@
     height: 50px;
     background-color: #ffffff;
     text-align: center;
-    transition-duration: .3s;
+    transition-duration: .5s;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
     .header-title {
       line-height: 50px;

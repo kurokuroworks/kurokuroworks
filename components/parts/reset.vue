@@ -21,7 +21,7 @@
     box-sizing: border-box;
   }
   *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
   img, embed, iframe, object, audio, video {
     height: auto;

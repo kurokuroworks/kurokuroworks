@@ -27,12 +27,11 @@
     }
   }
   .section-title {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
     padding: 40px 0 30px;
-  }
-  .item-container {
-    display: flex;
-    justify-content: space-between;
+    span {
+      font-size: 12px;
+    }
   }
 </style>
