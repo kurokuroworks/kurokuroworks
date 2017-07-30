@@ -1,5 +1,5 @@
 <template>
-  <section class="books">
+  <section class="books cover">
     <div class="container">
       <h2 class="section-title">Books<span>書籍・同人誌</span></h2>
       <ul class="item-container">
@@ -31,9 +31,13 @@
 
 <style lang="scss">
   .books {
+    &.cover {
+      background-image: url("~assets/images/galaxy.jpg");
+    }
     .item-container {
       display: flex;
       flex-wrap: wrap;
+      padding: 10px;
     }
     .item-parts {
       width: 50%;

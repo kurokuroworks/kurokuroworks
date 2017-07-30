@@ -26,10 +26,18 @@
       color: #333333;
     }
   }
+  .cover {
+    background-repeat: no-repeat;
+    background-size: contain;
+    .section-title {
+      color: #ffffff;
+      padding: 100px 20px 0;
+    }
+  }
   .section-title {
     font-size: 28px;
     font-weight: bold;
-    padding: 40px 10px 10px;
+    padding: 50px 20px 0;
     span {
       font-size: 13px;
       padding-left: 5px;

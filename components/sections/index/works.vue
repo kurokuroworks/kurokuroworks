@@ -1,5 +1,5 @@
 <template>
-  <section class="works">
+  <section class="works cover">
     <div class="container">
       <h2 class="section-title">Works<span>公開中のアプリ</span></h2>
       <ul class="item-container">
@@ -31,12 +31,17 @@
 
 <style lang="scss">
   .works {
+    &.cover {
+      background-image: url("~assets/images/galaxy.jpg");
+    }
     .item-container {
       display: flex;
       flex-wrap: wrap;
+      padding: 10px;
     }
     .item-parts {
       width: 100%;
+      padding: 10px;
     }
   }
 </style>

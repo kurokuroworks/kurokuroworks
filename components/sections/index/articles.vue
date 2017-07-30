@@ -1,5 +1,5 @@
 <template>
-  <section class="articles">
+  <section class="articles cover">
     <div class="container">
       <h2 class="section-title">Articles<span>記事・ブログ</span></h2>
       <ul class="item-container">
@@ -30,6 +30,17 @@
 
 <style lang="scss">
   .articles {
-
+    &.cover {
+      background-image: url("~assets/images/galaxy.jpg");
+    }
+    .item-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    .item-parts {
+      width: 100%;
+      padding: 0;
+    }
   }
 </style>

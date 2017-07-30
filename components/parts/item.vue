@@ -4,25 +4,31 @@
       <template v-if="id">
         <nuxt-link :to="href">
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
-          <h3 class="title">{{title}}</h3>
-          <p class="meta">{{meta}}</p>
-          <p class="description">{{description}}</p>
+          <div class="inner">
+            <h3 class="title">{{title}}</h3>
+            <p class="meta">{{meta}}</p>
+            <p class="description">{{description}}</p>
+          </div>
         </nuxt-link>
       </template>
       <template v-else-if="href">
         <a :href="href">
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
-          <h3 class="title">{{title}}</h3>
-          <p class="meta">{{meta}}</p>
-          <p class="description">{{description}}</p>
+          <div class="inner">
+            <h3 class="title">{{title}}</h3>
+            <p class="meta">{{meta}}</p>
+            <p class="description">{{description}}</p>
+          </div>
         </a>
       </template>
       <template v-else>
         <div>
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
-          <h3 class="title">{{title}}</h3>
-          <p class="meta">{{meta}}</p>
-          <p class="description">{{description}}</p>
+          <div class="inner">
+            <h3 class="title">{{title}}</h3>
+            <p class="meta">{{meta}}</p>
+            <p class="description">{{description}}</p>
+          </div>
         </div>
       </template>
     </div>
@@ -37,14 +43,20 @@
 
 <style lang="scss">
   .item-parts {
-    a {
-      text-decoration: none;
-    }
     .block {
       width: 100%;
       background-color: #ffffff;
       border: 1px solid #f0f0f0;
-      padding: 10px;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+    }
+    .thumbnail {
+      display: block;
+    }
+    .inner {
+      padding: 8px 10px;
     }
     .title {
       font-size: 17px;
