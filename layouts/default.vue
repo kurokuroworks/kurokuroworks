@@ -41,6 +41,7 @@
     font-size: 28px;
     font-weight: bold;
     padding: 0 20px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.3);
     span {
       font-size: 13px;
       padding-left: 5px;

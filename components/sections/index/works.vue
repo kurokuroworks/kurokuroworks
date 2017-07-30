@@ -32,7 +32,7 @@
 <style lang="scss">
   .works {
     &.cover {
-      background-image: url("~assets/images/galaxy.jpg");
+      background-image: url("~assets/images/cover_works.jpg");
     }
     .item-parts {
       width: 100%;

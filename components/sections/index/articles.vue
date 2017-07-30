@@ -31,7 +31,7 @@
 <style lang="scss">
   .articles {
     &.cover {
-      background-image: url("~assets/images/galaxy.jpg");
+      background-image: url("~assets/images/cover_articles.jpg");
     }
     .item-container {
       padding: 10px;

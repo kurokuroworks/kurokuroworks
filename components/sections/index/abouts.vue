@@ -6,7 +6,7 @@
         <h3>「かわいい！」を作ります</h3>
         <p>"くろくろわーくす"は、なのくろと黒曜の技術系サークルです。</p>
         <p>Web開発、Androidアプリ開発、技術書の執筆、デザイン、映像制作など多分野で雑多に活動しています。</p>
-        <p>サークルの目標は「かわいい！」を作ることです。かわいいは正義ですので、かわいいと思うものを技術を無駄遣いして作っていきたいと思っています。</p>
+        <p>サークルの目標は「かわいい！」を作ることです。かわいいは正義なので、かわいいと思うものを技術を注ぎ込んで作っていきたいと思っています。</p>
       </div>
       <div class="staff">
         <h3 class="subtitle">なかのひと</h3>
@@ -40,7 +40,7 @@
 <style lang="scss">
   .abouts {
     &.cover {
-      background-image: url("~assets/images/galaxy.jpg");
+      background-image: url("~assets/images/cover_abouts.jpg");
     }
     .about {
       box-shadow: 0 1px 2px rgba(0,0,0,0.1);

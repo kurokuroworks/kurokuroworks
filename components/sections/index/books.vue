@@ -32,7 +32,7 @@
 <style lang="scss">
   .books {
     &.cover {
-      background-image: url("~assets/images/galaxy.jpg");
+      background-image: url("~assets/images/cover_books.jpg");
     }
     .item-parts {
       width: 50%;
