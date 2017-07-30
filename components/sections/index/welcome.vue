@@ -2,7 +2,7 @@
   <section class="welcome">
     <div class="container">
       <div class="chloe">
-        <img src="~assets/images/dummy.png">
+        <img src="~assets/images/chloe.png">
       </div>
       <div class="title">
         <h1><img src="~assets/images/logo.png" /></h1>
