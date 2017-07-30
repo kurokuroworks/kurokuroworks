@@ -37,7 +37,7 @@
     .item-container {
       display: flex;
       flex-wrap: wrap;
-      padding: 10px;
+      padding: 0 10px;
     }
     .item-parts {
       width: 100%;

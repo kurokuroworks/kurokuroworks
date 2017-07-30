@@ -3,21 +3,21 @@
   "all": [
     "img/galaxy.ad0fa63.jpg",
     "img/dummy.67ad6e3.png",
-    "0.nuxt.bundle.76c9e9aa7f0ab47a217e.js",
+    "0.nuxt.bundle.8a105fa44a202195eda4.js",
     "1.nuxt.bundle.476aa060e6fe8094150b.js",
     "2.nuxt.bundle.2969b8cd2686630802bb.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js",
-    "manifest.d85546fe9eedd74c7f92.js",
+    "manifest.225bf8005ad0b2384df2.js",
     "index.html"
   ],
   "initial": [
-    "manifest.d85546fe9eedd74c7f92.js",
+    "manifest.225bf8005ad0b2384df2.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js"
   ],
   "async": [
-    "0.nuxt.bundle.76c9e9aa7f0ab47a217e.js",
+    "0.nuxt.bundle.8a105fa44a202195eda4.js",
     "1.nuxt.bundle.476aa060e6fe8094150b.js",
     "2.nuxt.bundle.2969b8cd2686630802bb.js"
   ],
