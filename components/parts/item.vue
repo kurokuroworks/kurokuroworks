@@ -35,19 +35,11 @@
 
 <style lang="scss">
   .item-parts {
-    width: 100%;
-    padding: 10px;
-    &.work {
-      //
-    }
-    &.book {
-      //
-    }
-    &.article {
-      //
-    }
-    &.member {
-      //
+    background-color: #ffffff;
+    border-top: 1px solid #f0f0f0;
+    padding: 15px 12px;
+    &:last-child {
+      border-bottom: 1px solid #f0f0f0;
     }
   }
 </style>

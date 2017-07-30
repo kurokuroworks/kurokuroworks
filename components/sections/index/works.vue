@@ -31,6 +31,13 @@
 
 <style lang="scss">
   .works {
-
+    .item-container {
+      display: flex;
+      flex-wrap: wrap;
+      .item-parts {
+        width: 100%;
+        padding: 10px;
+      }
+    }
   }
 </style>
