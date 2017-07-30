@@ -26,6 +26,15 @@
     justify-content: center;
     align-items: center;
     background-image: url("~assets/images/background.png");
+    .chloe {
+      @keyframes fuwafuwa {
+        0% { top: 0;}
+        50% { top: 20px; }
+        100% { top: 0; }
+      }
+      animation: fuwafuwa 3s infinite;
+      position: relative;
+    }
     .title {
       text-align: center;
       h1, p {
