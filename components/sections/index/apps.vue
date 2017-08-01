@@ -38,6 +38,9 @@
       width: 100%;
       max-width: 333px;
       padding: 10px;
+      @media screen and (max-width: 685px) {
+        max-width: 100%;
+      }
     }
   }
 </style>

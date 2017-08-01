@@ -30,6 +30,7 @@
 <style lang="scss">
   header {
     position: fixed;
+    z-index: 1;
     top: -50px;
     left: 0;
     right: 0;

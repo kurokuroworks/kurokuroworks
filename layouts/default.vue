@@ -63,6 +63,7 @@
   .item-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     padding: 0 10px;
   }
 </style>
