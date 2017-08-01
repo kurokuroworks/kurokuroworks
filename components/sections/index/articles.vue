@@ -1,5 +1,8 @@
 <template>
-  <section class="articles cover">
+  <section class="articles">
+    <div class="cover">
+      <img src="~assets/images/cover_articles.jpg" />
+    </div>
     <div class="container">
       <h2 class="section-title">Articles<span>記事・ブログ</span></h2>
       <ul class="item-container">
@@ -35,9 +38,6 @@
 
 <style lang="scss">
   .articles {
-    &.cover {
-      background-image: url("~assets/images/cover_articles.jpg");
-    }
     .item-container {
       padding: 10px;
     }

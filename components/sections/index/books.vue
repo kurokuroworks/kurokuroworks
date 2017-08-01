@@ -1,5 +1,8 @@
 <template>
-  <section class="books cover">
+  <section class="books">
+    <div class="cover">
+      <img src="~assets/images/cover_books.jpg" />
+    </div>
     <div class="container">
       <h2 class="section-title">Books<span>技術書・同人誌</span></h2>
       <ul class="item-container">
@@ -11,7 +14,6 @@
             :thumbnail="item.thumbnail"
             :title="item.title"
             :meta="item.meta"
-            :description="item.description"
           ></item-parts>
         </template>
       </ul>
@@ -31,11 +33,9 @@
 
 <style lang="scss">
   .books {
-    &.cover {
-      background-image: url("~assets/images/cover_books.jpg");
-    }
     .item-parts {
       width: 50%;
+      max-width: 200px;
       padding: 10px;
     }
   }

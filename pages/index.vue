@@ -2,7 +2,7 @@
   <div>
     <HeaderSection />
     <WelcomeSection />
-    <WorksSection :data="worksData" />
+    <appsSection :data="appsData" />
     <BooksSection :data="booksData" />
     <ArticlesSection :data="articlesData" />
     <AboutsSection :data="aboutsData" />
@@ -15,7 +15,7 @@
   import HeaderSection from '~components/sections/common/header.vue'
   import FooterSection from '~components/sections/common/footer.vue'
   import WelcomeSection from '~components/sections/index/welcome.vue'
-  import WorksSection from '~components/sections/index/works.vue'
+  import appsSection from '~components/sections/index/apps.vue'
   import BooksSection from '~components/sections/index/books.vue'
   import ArticlesSection from '~components/sections/index/articles.vue'
   import AboutsSection from '~components/sections/index/abouts.vue'
@@ -24,7 +24,7 @@
       HeaderSection,
       FooterSection,
       WelcomeSection,
-      WorksSection,
+      appsSection,
       BooksSection,
       ArticlesSection,
       AboutsSection
@@ -36,17 +36,17 @@
       // 直接リンクから遷移する場合や、GoogleBotからのアクセスの場合に表示内容が古いままとなってしまうので注意。
       // (きっとなんかいい方法があると思うけど初回アクセス時の速度を考えたらトレードオフな気もする)
 
-      let worksData, booksData, articlesData, aboutsData
+      let appsData, booksData, articlesData, aboutsData
       // sessionStorage 読込
       if (context.isClient && sessionStorage) {
-        worksData = JSON.parse(sessionStorage.getItem('worksData'))
+        appsData = JSON.parse(sessionStorage.getItem('appsData'))
         booksData = JSON.parse(sessionStorage.getItem('booksData'))
         articlesData = JSON.parse(sessionStorage.getItem('articlesData'))
         aboutsData = JSON.parse(sessionStorage.getItem('aboutsData'))
       }
       // リソース取得 (sessionStorage or Ajax)
       const queue = [
-        worksData ? worksData : request.get(`${context.env.staticBaseUrl}/www/works.json`).then(res => res.body),
+        appsData ? appsData : request.get(`${context.env.staticBaseUrl}/www/apps.json`).then(res => res.body),
         booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/books.json`).then(res => res.body),
         articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.body),
         aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.body)
@@ -54,13 +54,13 @@
       return Promise.all(queue).then(results => {
         // sessionStorage 保存
         if (context.isClient && sessionStorage) {
-          if (!worksData) sessionStorage.setItem('worksData', JSON.stringify(results[0]))
+          if (!appsData) sessionStorage.setItem('appsData', JSON.stringify(results[0]))
           if (!booksData) sessionStorage.setItem('booksData', JSON.stringify(results[1]))
           if (!articlesData) sessionStorage.setItem('articlesData', JSON.stringify(results[2]))
           if (!aboutsData) sessionStorage.setItem('aboutsData', JSON.stringify(results[3]))
         }
         return {
-          worksData: results[0],
+          appsData: results[0],
           booksData: results[1],
           articlesData: results[2],
           aboutsData: results[3],

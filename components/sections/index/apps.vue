@@ -1,7 +1,10 @@
 <template>
-  <section class="works cover">
+  <section class="apps">
+    <div class="cover">
+      <img src="~assets/images/cover_apps.jpg" />
+    </div>
     <div class="container">
-      <h2 class="section-title">Works<span>公開中のアプリ</span></h2>
+      <h2 class="section-title">Apps<span>公開中のアプリ</span></h2>
       <ul class="item-container">
         <template v-for="item in data">
           <item-parts
@@ -30,12 +33,10 @@
 </script>
 
 <style lang="scss">
-  .works {
-    &.cover {
-      background-image: url("~assets/images/cover_works.jpg");
-    }
+  .apps {
     .item-parts {
       width: 100%;
+      max-width: 333px;
       padding: 10px;
     }
   }

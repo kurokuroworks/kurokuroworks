@@ -1,29 +1,29 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "0.nuxt.bundle.c864876b982d1179f6d0.js",
+    "0.nuxt.bundle.88c13b357deae72395fd.js",
     "img/logo.539ae9e.png",
     "img/cover_abouts.c9c42a1.jpg",
+    "img/cover_apps.6833b5e.jpg",
     "img/cover_articles.73395c9.jpg",
     "img/cover_books.b6b11bd.jpg",
-    "img/cover_works.6833b5e.jpg",
     "img/logo_white.8eff58f.png",
     "img/chloe.67ad6e3.png",
-    "1.nuxt.bundle.67ebc2b6e69b684b2005.js",
+    "1.nuxt.bundle.00fb748fdb50ac8667eb.js",
     "2.nuxt.bundle.d114f90cf4305bdd495a.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js",
-    "manifest.23e11d66e97c468aeafd.js",
+    "manifest.e6935b2ba0deefb4d4d9.js",
     "index.html"
   ],
   "initial": [
-    "manifest.23e11d66e97c468aeafd.js",
+    "manifest.e6935b2ba0deefb4d4d9.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js"
   ],
   "async": [
-    "0.nuxt.bundle.c864876b982d1179f6d0.js",
-    "1.nuxt.bundle.67ebc2b6e69b684b2005.js",
+    "0.nuxt.bundle.88c13b357deae72395fd.js",
+    "1.nuxt.bundle.00fb748fdb50ac8667eb.js",
     "2.nuxt.bundle.d114f90cf4305bdd495a.js"
   ],
   "modules": {
@@ -523,6 +523,16 @@
       5,
       6
     ],
+    "5d37b2d0": [
+      0,
+      1,
+      7,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
     "47f30a1b": [
       0,
       1,
@@ -544,16 +554,6 @@
       6
     ],
     "9fa55f18": [
-      0,
-      1,
-      7,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "00df51d8": [
       0,
       1,
       7,
@@ -625,7 +625,7 @@
       5,
       6
     ],
-    "2ef29490": [
+    "215cfffc": [
       0,
       1,
       7,
@@ -635,7 +635,7 @@
       5,
       6
     ],
-    "40bf8204": [
+    "2ef29490": [
       0,
       1,
       7,
@@ -708,6 +708,16 @@
       5,
       6
     ],
+    "64144e3e": [
+      0,
+      1,
+      7,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
     "755735a8": [
       0,
       1,
@@ -719,16 +729,6 @@
       6
     ],
     "436700be": [
-      0,
-      1,
-      7,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "b2c7670e": [
       0,
       1,
       7,
@@ -781,6 +781,16 @@
       5,
       6
     ],
+    "2b87e8d0": [
+      0,
+      1,
+      7,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
     "6738401b": [
       0,
       1,
@@ -802,16 +812,6 @@
       6
     ],
     "cf2d4b18": [
-      0,
-      1,
-      7,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "09723dd8": [
       0,
       1,
       7,
@@ -867,7 +867,7 @@
       5,
       6
     ],
-    "5342d144": [
+    "5f314d50": [
       0,
       1,
       7,
@@ -877,7 +877,7 @@
       5,
       6
     ],
-    "28a3fd20": [
+    "5342d144": [
       0,
       1,
       7,
@@ -966,7 +966,7 @@
       5,
       6
     ],
-    "7d9ad839": [
+    "235899eb": [
       0,
       1,
       7,
@@ -976,7 +976,7 @@
       5,
       6
     ],
-    "2c7c6235": [
+    "7d9ad839": [
       0,
       1,
       7,

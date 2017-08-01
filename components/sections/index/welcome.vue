@@ -28,9 +28,18 @@
     background-image: url("~assets/images/background.png");
     .chloe {
       @keyframes fuwafuwa {
-        0% { top: 0;}
-        50% { top: 20px; }
-        100% { top: 0; }
+        0% {
+          top: -10px;
+          filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.4));
+        }
+        50% {
+          top: 10px;
+          filter: drop-shadow(10px 10px 0 rgba(0,0,0,0.2));
+        }
+        100% {
+          top: -10px;
+          filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.4));
+        }
       }
       animation: fuwafuwa 3s infinite;
       position: relative;

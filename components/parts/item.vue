@@ -47,7 +47,7 @@
       width: 100%;
       background-color: #ffffff;
       box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-      margin-bottom: 1px;
+      margin-bottom: 2px;
     }
     a {
       text-decoration: none;
@@ -57,7 +57,7 @@
       display: block;
     }
     .inner {
-      padding: 8px 10px;
+      padding: 10px;
     }
     .title {
       font-size: 17px;
