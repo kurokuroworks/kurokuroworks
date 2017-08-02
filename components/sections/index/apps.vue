@@ -1,8 +1,5 @@
 <template>
   <section class="apps">
-    <div class="cover">
-      <img src="~assets/images/cover_apps.jpg" />
-    </div>
     <div class="container">
       <h2 class="section-title">Apps<span>公開中のアプリ</span></h2>
       <ul class="item-container">
@@ -34,13 +31,6 @@
 
 <style lang="scss">
   .apps {
-    .item-parts {
-      width: 100%;
-      max-width: 333px;
-      padding: 10px;
-      @media screen and (max-width: 685px) {
-        max-width: 100%;
-      }
-    }
+
   }
 </style>

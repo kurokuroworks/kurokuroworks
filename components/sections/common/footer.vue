@@ -12,18 +12,7 @@
 
 <style lang="scss">
   footer {
-    padding: 15px 20px;
     background-color: #555555;
     color: #ffffff;
-    overflow: hidden;
-    .title {
-      img {
-        display: inline-block;
-        width: 150px;
-      }
-    }
-    .copyright {
-      line-height: 14px;
-    }
   }
 </style>

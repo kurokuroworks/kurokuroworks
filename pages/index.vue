@@ -2,9 +2,9 @@
   <div>
     <HeaderSection />
     <WelcomeSection />
+    <ArticlesSection :data="articlesData" />
     <appsSection :data="appsData" />
     <BooksSection :data="booksData" />
-    <ArticlesSection :data="articlesData" />
     <AboutsSection :data="aboutsData" />
     <FooterSection />
   </div>

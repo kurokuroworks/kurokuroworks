@@ -1,8 +1,5 @@
 <template>
   <section class="abouts">
-    <div class="cover">
-      <img src="~assets/images/cover_abouts.jpg" />
-    </div>
     <div class="container">
       <h2 class="section-title">About<span>サークルについて</span></h2>
       <div class="about">
@@ -41,29 +38,6 @@
 
 <style lang="scss">
   .abouts {
-    .about {
-      position: relative;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-      background-color: #ffffff;
-      margin: 10px 20px;
-      padding: 10px;
-      h3 {
-        font-size: 18px;
-        line-height: 30px;
-        margin-bottom: 8px;
-        font-weight: bold;
-        text-align: center;
-      }
-    }
-    .subtitle {
-      padding: 20px 20px 0;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .item-parts {
-      width: 50%;
-      max-width: 200px;
-      padding: 10px;
-    }
+
   }
 </style>
