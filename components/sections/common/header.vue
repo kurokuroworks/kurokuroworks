@@ -47,7 +47,7 @@
 <style lang="scss">
   .header-container {
     + section {
-      margin-top: 70px;
+      margin-top: 60px;
     }
   }
   header {
@@ -56,7 +56,7 @@
     background-color: #ffffff;
     left: 0;
     right: 0;
-    height: 70px;
+    height: 60px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     .header-title {
       float: left;
@@ -66,7 +66,7 @@
       background-color: #71bfb6;
       img {
         display: block;
-        height: 100px;
+        height: 90px;
         margin: -30px auto 0;
         padding: 20px;
       }
@@ -74,14 +74,14 @@
     .header-description {
       display: none;
       float: left;
-      padding: 10px 20px;
+      padding: 8px 15px;
     }
   }
   nav {
     position: relative;
     z-index: 1;
     transition-duration: .5s;
-    top: 70px;
+    top: 60px;
     left: 0;
     right: 0;
     height: 50px;
@@ -121,9 +121,9 @@
         width: 300px;
         background-color: #669fcb;
         img {
-          height: 70px;
+          height: 60px;
           margin-top: 0;
-          padding: 10px;
+          padding: 8px;
         }
       }
       .header-description {
@@ -137,7 +137,7 @@
   }
   .is-visible-nav {
     nav {
-      top: 69px; // box-shadow の見た目的に -1px
+      top: 59px; // box-shadow の見た目的に -1px
     }
   }
 </style>
