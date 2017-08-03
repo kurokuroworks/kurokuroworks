@@ -1,8 +1,6 @@
 <template>
   <section class="welcome">
-    <div class="container">
-
-    </div>
+    <img class="chloe" src="~assets/images/chloe.png" >
   </section>
 </template>
 
@@ -14,7 +12,8 @@
 
 <style lang="scss">
   .welcome {
-    background-image: url("~assets/images/background.png");
+    height: 300px;
+    background-color: #71bfb6;
     .chloe {
       @keyframes fuwafuwa {
         0% {
@@ -31,7 +30,12 @@
         }
       }
       animation: fuwafuwa 3s infinite;
-      position: relative;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 25px auto 0;
+      z-index: 10;
+      height: 270px;
     }
   }
 </style>

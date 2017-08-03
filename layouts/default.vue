@@ -27,43 +27,13 @@
     -moz-osx-font-smoothing: grayscale;
     color: #555555;
     background-color: #f5f5f5;
-    font-size: 14px;
+    font-size: 16px;
     a {
       color: #555555;
     }
   }
-  section {
-    margin-bottom: 50px;
-  }
-  .cover {
-    height: 200px;
-    overflow: hidden;
-    margin-bottom: -80px;
-    img {
-      width: 100%;
-    }
-  }
   .container {
-    max-width: 1020px;
+    max-width: 1100px;
     margin: 0 auto;
-    .section-title {
-      color: #ffffff;
-    }
-  }
-  .section-title {
-    font-size: 28px;
-    font-weight: bold;
-    padding: 0 20px;
-    text-shadow: 0 1px 2px rgba(0,0,0,.3);
-    span {
-      font-size: 14px;
-      padding-left: 5px;
-    }
-  }
-  .item-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 0 10px;
   }
 </style>

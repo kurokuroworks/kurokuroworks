@@ -1,7 +1,7 @@
 <template>
   <div>
-    <HeaderSection />
     <WelcomeSection />
+    <HeaderSection />
     <ArticlesSection :data="articlesData" />
     <appsSection :data="appsData" />
     <BooksSection :data="booksData" />
