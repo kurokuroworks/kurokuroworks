@@ -32,8 +32,8 @@
     mounted() {
       if (window) {
         window.addEventListener('scroll', throttle(() => {
-          this.isFixed = 270 < window.pageYOffset // 200px = welcome.height
-          this.isVisibleNav = 270 > window.pageYOffset || window.pageYOffset < this.currentPosition // 400px = 適当
+          this.isFixed = 270 < window.pageYOffset
+          this.isVisibleNav = 270 > window.pageYOffset || window.pageYOffset < this.currentPosition
           this.currentPosition = window.pageYOffset
         }, 100))
       }
