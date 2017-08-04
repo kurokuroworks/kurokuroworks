@@ -13,7 +13,7 @@
 <style lang="scss">
   .welcome {
     height: 300px;
-    background-color: #71bfb6;
+    background-color: #ffa851;
     .chloe {
       @keyframes fuwafuwa {
         0% {

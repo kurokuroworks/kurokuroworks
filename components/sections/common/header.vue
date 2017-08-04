@@ -63,7 +63,7 @@
         text-align: center;
         transition-duration: .5s;
         width: 100%;
-        background-color: #71bfb6;
+        background-color: #ffa851;
         img {
           display: block;
           height: 90px;
@@ -123,7 +123,7 @@
         overflow: hidden;
         .header-title {
           width: 300px;
-          background-color: #669fcb;
+          background-color: #ffa851;
           img {
             height: 60px;
             margin-top: 0;
