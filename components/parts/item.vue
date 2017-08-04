@@ -4,7 +4,7 @@
       <template v-if="id">
         <nuxt-link :to="href">
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
-          <div class="inner">
+          <div class="text">
             <h3 class="title">{{title}}</h3>
             <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
@@ -14,7 +14,7 @@
       <template v-else-if="href">
         <a :href="href">
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
-          <div class="inner">
+          <div class="text">
             <h3 class="title">{{title}}</h3>
             <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
@@ -24,7 +24,7 @@
       <template v-else>
         <div>
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
-          <div class="inner">
+          <div class="text">
             <h3 class="title">{{title}}</h3>
             <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
@@ -43,6 +43,11 @@
 
 <style lang="scss">
   .item-parts {
-
+    .thumbnail {
+      display: block;
+    }
+    .text {
+      padding: 5px;
+    }
   }
 </style>

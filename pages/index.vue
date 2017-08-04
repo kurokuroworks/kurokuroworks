@@ -46,10 +46,10 @@
       }
       // リソース取得 (sessionStorage or Ajax)
       const queue = [
-        appsData ? appsData : request.get(`${context.env.staticBaseUrl}/www/apps.json`).then(res => res.body),
-        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/books.json`).then(res => res.body),
-        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.body),
-        aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.body)
+        appsData ? appsData : request.get(`${context.env.staticBaseUrl}/www/dummy.json`).then(res => res.body),
+        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/dummy.json`).then(res => res.body),
+        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/dummy.json`).then(res => res.body),
+        aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/dummy.json`).then(res => res.body)
       ]
       return Promise.all(queue).then(results => {
         // sessionStorage 保存

@@ -63,7 +63,7 @@
         text-align: center;
         transition-duration: .5s;
         width: 100%;
-        background-color: #333333;
+        background-color: #cccccc;
         img {
           display: block;
           height: 90px;
@@ -97,13 +97,13 @@
           justify-content: center;
           transition-duration: .3s;
           &:hover {
-            background-color: #dbb6ef;
+            background-color: #cccccc;
           }
           &:last-child p {
             border-right: none;
           }
           p {
-            border-right: 1px solid #dddddd;
+            border-right: 1px solid #555555;
             text-align: center;
             line-height: 35px;
             margin: 5px 0;
@@ -122,15 +122,15 @@
         top: 0;
         overflow: hidden;
         .header-title {
-          width: 300px;
-          background-color: #333333;
+          width: 100%;
+          background-color: #cccccc;
           img {
             height: 60px;
             margin-top: 0;
             padding: 8px;
           }
-          @media (max-width:800px) {
-            width: 100%;
+          @media (min-width:1095px) {
+            width: 300px;
           }
         }
         .header-description {

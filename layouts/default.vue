@@ -33,7 +33,14 @@
     }
   }
   .container {
-    max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
+    background-color: #dddddd;
+    @media screen and (min-width: 735px) { // 720 + 15
+      width: 720px;
+    }
+    @media screen and (min-width: 1095px) { // 1080 + 15
+      width: 1080px;
+    }
   }
 </style>
