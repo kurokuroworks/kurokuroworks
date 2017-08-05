@@ -3,22 +3,22 @@
   "all": [
     "img/logo_white.8eff58f.png",
     "img/chloe.54d4c12.png",
-    "0.nuxt.bundle.9db0c4a4f8fa629ad913.js",
-    "1.nuxt.bundle.aef9d56280aa851471b8.js",
+    "0.nuxt.bundle.5c054ef842067d39117e.js",
+    "1.nuxt.bundle.c216c36fc414cc5a9da7.js",
     "2.nuxt.bundle.2969b8cd2686630802bb.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js",
-    "manifest.affe5e69df816b9be2f5.js",
+    "manifest.80f6629b1d8469127ddd.js",
     "index.html"
   ],
   "initial": [
-    "manifest.affe5e69df816b9be2f5.js",
+    "manifest.80f6629b1d8469127ddd.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.672bb58f8a58fbaf4345.js"
   ],
   "async": [
-    "0.nuxt.bundle.9db0c4a4f8fa629ad913.js",
-    "1.nuxt.bundle.aef9d56280aa851471b8.js",
+    "0.nuxt.bundle.5c054ef842067d39117e.js",
+    "1.nuxt.bundle.c216c36fc414cc5a9da7.js",
     "2.nuxt.bundle.2969b8cd2686630802bb.js"
   ],
   "modules": {
@@ -545,7 +545,7 @@
       0,
       1
     ],
-    "4a96f695": [
+    "489b5033": [
       2,
       0,
       1
@@ -701,7 +701,7 @@
       0,
       1
     ],
-    "3b8eae7e": [
+    "bc4c162c": [
       2,
       0,
       1
