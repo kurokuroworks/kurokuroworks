@@ -30,12 +30,12 @@
     font-size: 16px;
     a {
       color: #555555;
+      text-decoration: none;
     }
   }
   .container {
     margin: 0 auto;
     width: 100%;
-    background-color: #dddddd;
     @media screen and (min-width: 735px) { // 720 + 15
       width: 720px;
     }

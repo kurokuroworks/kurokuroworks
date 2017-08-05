@@ -32,8 +32,8 @@
     mounted() {
       if (window) {
         window.addEventListener('scroll', throttle(() => {
-          this.isFixed = 270 < window.pageYOffset
-          this.isVisibleNav = 270 > window.pageYOffset || window.pageYOffset < this.currentPosition
+          this.isFixed = 370 < window.pageYOffset
+          this.isVisibleNav = 370 > window.pageYOffset || window.pageYOffset < this.currentPosition
           this.currentPosition = window.pageYOffset
         }, 100))
       }
@@ -66,8 +66,8 @@
         background-color: #cccccc;
         img {
           display: block;
-          height: 90px;
-          margin: -30px auto 0;
+          height: 100px;
+          margin: -40px auto 0;
           padding: 20px;
         }
       }

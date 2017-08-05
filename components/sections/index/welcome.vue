@@ -12,7 +12,7 @@
 
 <style lang="scss">
   .welcome {
-    height: 300px;
+    height: 400px;
     background-color: #cccccc;
     .chloe {
       @keyframes fuwafuwa {
@@ -33,9 +33,9 @@
       position: absolute;
       left: 0;
       right: 0;
-      margin: 25px auto 0;
+      margin: 50px auto 0;
       z-index: 10;
-      height: 270px;
+      height: 300px;
     }
   }
 </style>

@@ -38,6 +38,10 @@
 
 <style lang="scss">
   .abouts {
-
+    .staff {
+      .item-container {
+        display: flex;
+      }
+    }
   }
 </style>

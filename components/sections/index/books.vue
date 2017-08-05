@@ -11,7 +11,6 @@
             :thumbnail="item.thumbnail"
             :title="item.title"
             :meta="item.meta"
-            :description="item.description"
           ></item-parts>
         </template>
       </ul>
@@ -31,6 +30,19 @@
 
 <style lang="scss">
   .books {
-
+    .item-container {
+      display: flex;
+      flex-wrap: wrap;
+      .item-parts {
+        width: 50%;
+        padding: 10px;
+        .text {
+          background-color: #ffffff;
+        }
+        @media screen and (min-width: 735px) { // 720 + 15
+          width: 180px;
+        }
+      }
+    }
   }
 </style>

@@ -2,35 +2,89 @@
   <section class="apps">
     <div class="container">
       <h2 class="section-title">Apps<span>公開中のアプリ</span></h2>
-      <ul class="item-container">
-        <template v-for="item in data">
-          <item-parts
-            :type="'work'"
-            :id="item.id"
-            :href="item.href"
-            :thumbnail="item.thumbnail"
-            :title="item.title"
-            :meta="item.meta"
-            :description="item.description"
-          ></item-parts>
-        </template>
-      </ul>
+    </div>
+    <div class="item-container nyanpass">
+      <div class="container">
+        <div class="item">
+          <img src="https://static.kurokuroworks.net/www/dummy/dummy_16x9.jpg" />
+          <div class="apps-item-text">
+            <h2>次のアプリ(仮)</h2>
+            <p>せつめいせつめいせつめい</p>
+            <a href="#">
+              <div class="button">
+                <p>アプリを開く</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item-container feature">
+      <div class="container">
+        <div class="item">
+          <img src="https://static.kurokuroworks.net/www/dummy/dummy_16x9.jpg" />
+          <div class="apps-item-text">
+            <h2>次のアプリ(仮)</h2>
+            <p>せつめいせつめいせつめい</p>
+            <a href="#">
+              <div class="button">
+                <p>アプリを開く</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-  import ItemParts from '~components/parts/item.vue'
   export default {
-    props: ['data'],
-    components: {
-      ItemParts
-    }
+
   }
 </script>
 
 <style lang="scss">
   .apps {
-
+    .item-container {
+      .item {
+        position: relative;
+        padding: 10px;
+        overflow: hidden;
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+        .apps-item-text {
+          position: relative;
+          h2 {
+            font-size: 24px;
+          }
+        }
+        @media screen and (min-width: 735px) { // 720 + 15
+          img {
+            margin: 0;
+            width: 300px;
+          }
+          .apps-item-text {
+            position: absolute;
+            bottom: 10px;
+            left: 320px;
+            .button {
+              background: #999999;
+              color: #ffffff;
+              padding: 4px 10px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .nyanpass {
+      background-color: #aaaaaa;
+    }
+    .feature {
+      background-color: #bbbbbb;
+    }
   }
 </style>

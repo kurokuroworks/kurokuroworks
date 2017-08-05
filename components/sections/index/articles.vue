@@ -15,6 +15,9 @@
           ></item-parts>
         </template>
       </ul>
+      <div>
+        <p>もっと見る</p>
+      </div>
     </div>
   </section>
 </template>

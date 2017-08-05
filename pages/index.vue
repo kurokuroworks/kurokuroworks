@@ -3,7 +3,7 @@
     <WelcomeSection />
     <HeaderSection />
     <ArticlesSection :data="articlesData" />
-    <appsSection :data="appsData" />
+    <appsSection />
     <BooksSection :data="booksData" />
     <AboutsSection :data="aboutsData" />
     <FooterSection />
@@ -36,40 +36,48 @@
       // 直接リンクから遷移する場合や、GoogleBotからのアクセスの場合に表示内容が古いままとなってしまうので注意。
       // (きっとなんかいい方法があると思うけど初回アクセス時の速度を考えたらトレードオフな気もする)
 
-      let appsData, booksData, articlesData, aboutsData
+      let booksData, articlesData, aboutsData
       // sessionStorage 読込
       if (context.isClient && sessionStorage) {
-        appsData = JSON.parse(sessionStorage.getItem('appsData'))
         booksData = JSON.parse(sessionStorage.getItem('booksData'))
         articlesData = JSON.parse(sessionStorage.getItem('articlesData'))
         aboutsData = JSON.parse(sessionStorage.getItem('aboutsData'))
       }
       // リソース取得 (sessionStorage or Ajax)
       const queue = [
-        appsData ? appsData : request.get(`${context.env.staticBaseUrl}/www/dummy.json`).then(res => res.body),
-        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/dummy.json`).then(res => res.body),
-        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/dummy.json`).then(res => res.body),
-        aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/dummy.json`).then(res => res.body)
+        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_b5.json`).then(res => res.body),
+        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_16x9.json`).then(res => res.body),
+        aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_other.json`).then(res => res.body)
       ]
       return Promise.all(queue).then(results => {
         // sessionStorage 保存
         if (context.isClient && sessionStorage) {
-          if (!appsData) sessionStorage.setItem('appsData', JSON.stringify(results[0]))
-          if (!booksData) sessionStorage.setItem('booksData', JSON.stringify(results[1]))
-          if (!articlesData) sessionStorage.setItem('articlesData', JSON.stringify(results[2]))
-          if (!aboutsData) sessionStorage.setItem('aboutsData', JSON.stringify(results[3]))
+          if (!booksData) sessionStorage.setItem('booksData', JSON.stringify(results[0]))
+          if (!articlesData) sessionStorage.setItem('articlesData', JSON.stringify(results[1]))
+          if (!aboutsData) sessionStorage.setItem('aboutsData', JSON.stringify(results[2]))
         }
         return {
-          appsData: results[0],
-          booksData: results[1],
-          articlesData: results[2],
-          aboutsData: results[3],
+          booksData: results[0],
+          articlesData: results[1],
+          aboutsData: results[2],
         }
       })
     }
   }
 </script>
 
-<style>
-
+<style lang="scss">
+  section {
+    margin-bottom: 50px;
+    &.welcome {
+      margin: 0;
+    }
+    .section-title {
+      margin: 0 10px;
+      font-size: 30px;
+      span {
+        font-size: 16px;
+      }
+    }
+  }
 </style>
