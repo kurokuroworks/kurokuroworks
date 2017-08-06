@@ -1,5 +1,5 @@
 <template>
-  <section class="abouts">
+  <section class="abouts about">
     <div class="container">
       <h2 class="section-title">About<span>サークルについて</span></h2>
       <div class="block">
@@ -9,7 +9,7 @@
         <p>Webアプリ開発、Androidアプリ開発、技術誌の発行、デザイン、映像制作など多分野で雑多に作業しています。</p>
         <p>かわいいは正義なので、かわいいと思うものに技術を注ぎ込みたいと思っています。</p>
       </div>
-      <div class="block">
+      <div class="block staff">
         <h3 class="subtitle">サークルのなかのひと</h3>
         <ul class="item-container">
           <li class="item-parts">
@@ -29,6 +29,53 @@
             </div>
           </li>
         </ul>
+      </div>
+      <div class="block contributor">
+        <h3 class="subtitle">Special thanks!</h3>
+        <ul class="item-container">
+          <li class="item-parts">
+            <img class="thumbnail" src="~assets/images/chloe.png">
+            <div class="text">
+              <h4 class="title">あああ</h4>
+              <p class="meta">イラストレーター</p>
+            </div>
+          </li>
+          <li class="item-parts">
+            <img class="thumbnail" src="~assets/images/chloe.png">
+            <div class="text">
+              <h4 class="title">あああ</h4>
+              <p class="meta">イラストレーター</p>
+            </div>
+          </li>
+          <li class="item-parts">
+            <img class="thumbnail" src="~assets/images/chloe.png">
+            <div class="text">
+              <h4 class="title">あああ</h4>
+              <p class="meta">イラストレーター</p>
+            </div>
+          </li>
+          <li class="item-parts">
+            <img class="thumbnail" src="~assets/images/chloe.png">
+            <div class="text">
+              <h4 class="title">あああ</h4>
+              <p class="meta">イラストレーター</p>
+            </div>
+          </li>
+          <li class="item-parts">
+            <img class="thumbnail" src="~assets/images/chloe.png">
+            <div class="text">
+              <h4 class="title">あああ</h4>
+              <p class="meta">イラストレーター</p>
+            </div>
+          </li>
+          <li class="item-parts">
+            <img class="thumbnail" src="~assets/images/chloe.png">
+            <div class="text">
+              <h4 class="title">あああ</h4>
+              <p class="meta">イラストレーター</p>
+            </div>
+          </li>
+        </ul>
         <p>"くろくろわーくす"では、かわいいものに魂を吹き込むエンジニア、かわいい絵が描けるイラストレーターを募集しています。</p>
         <p>同人活動に興味があり、一緒に作ってみたい方は @nanocloudx まで気兼ねなくご連絡をお待ちしております（ ＾ω＾）</p>
       </div>
@@ -45,35 +92,62 @@
   .abouts {
     .block {
       background-color: #ffffff;
-      padding: 10px;
+      padding: 10px 0;
       margin-bottom: 20px;
       text-align: center;
       h3 {
         font-size: 22px;
         padding: 10px 0 15px;
       }
-      .item-container {
-        display: flex;
-        flex-direction: column;
-        .item-parts {
-          width: 100%;
-          padding: 10px;
-          margin-bottom: 10px;
-          img {
-            margin: 0 auto;
-          }
-        }
-        @media screen and (min-width: 735px) { // 720 + 15
+      &.about {
+
+      }
+      &.staff {
+        .item-container {
+          display: flex;
+          flex-direction: column;
           .item-parts {
-            text-align: left;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
             img {
-              float: left;
-              margin-right: 10px;
+              margin: 0 auto;
             }
           }
+          @media screen and (min-width: 735px) { // 720 + 15
+            .item-parts {
+              text-align: left;
+              img {
+                float: left;
+                margin-right: 10px;
+              }
+            }
+          }
+          @media (min-width:1095px) {
+            flex-direction: row;
+          }
         }
-        @media (min-width:1095px) {
-          flex-direction: row;
+      }
+      &.contributor {
+        .item-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          .item-parts {
+            width: 50%;
+            max-width: 180px;
+            padding: 10px;
+            margin-bottom: 10px;
+            img {
+              max-height: 180px;
+              margin: 0 auto;
+            }
+          }
+          @media screen and (min-width: 735px) { // 720 + 15
+            .item-parts {
+              text-align: left;
+            }
+          }
         }
       }
     }

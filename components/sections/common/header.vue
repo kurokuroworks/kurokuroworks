@@ -81,9 +81,10 @@
       position: relative;
       z-index: 1;
       transition-duration: .5s;
+      transition-property: top;
+      margin-top: -2px; // background-size: cover に対する描画バグ補正
       left: 0;
       right: 0;
-      /*height: 45px;*/
       background-color: #ffffff;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
       ul {
@@ -145,6 +146,7 @@
       nav {
         position: fixed;
         top: 0;
+        margin-top: 0;
       }
       &.is-visible-nav {
         nav {
