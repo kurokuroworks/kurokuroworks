@@ -32,7 +32,11 @@
     mounted() {
       if (window) {
         window.addEventListener('scroll', throttle(() => {
-          this.isFixed = 370 < window.pageYOffset
+          if (window.innerWidth < 1095) {
+            this.isFixed = 400 < window.pageYOffset
+          } else {
+            this.isFixed = 370 < window.pageYOffset
+          }
           this.isVisibleNav = 450 > window.pageYOffset || window.pageYOffset < this.currentPosition
           this.currentPosition = window.pageYOffset
         }, 100))

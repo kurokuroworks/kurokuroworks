@@ -15,12 +15,20 @@
     background-color: #555555;
     color: #ffffff;
     padding: 15px 10px 20px;
+    text-align: center;
     .title {
       width: 180px;
+      margin: 0 auto;
     }
     .copyright {
       font-size: 14px;
       line-height: 16px;
+    }
+    @media screen and (min-width: 735px) {
+      text-align: left;
+      .title {
+        margin: 0;
+      }
     }
   }
 </style>
