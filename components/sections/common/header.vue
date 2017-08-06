@@ -32,8 +32,8 @@
     mounted() {
       if (window) {
         window.addEventListener('scroll', throttle(() => {
-          this.isFixed = 370 < window.pageYOffset
-          this.isVisibleNav = 370 > window.pageYOffset || window.pageYOffset < this.currentPosition
+          this.isFixed = 350 < window.pageYOffset
+          this.isVisibleNav = 350 > window.pageYOffset || window.pageYOffset < this.currentPosition
           this.currentPosition = window.pageYOffset
         }, 100))
       }
@@ -63,12 +63,12 @@
         text-align: center;
         transition-duration: .5s;
         width: 100%;
+        height: 100%;
         background-color: #cccccc;
         img {
           display: block;
-          height: 100px;
+          height: 100%;
           margin: -40px auto 0;
-          padding: 20px;
         }
       }
       .header-description {
@@ -77,11 +77,12 @@
         padding: 8px 15px;
       }
     }
+
     nav {
       position: relative;
       z-index: 1;
       transition-duration: .5s;
-      top: 60px;
+      top: 59px; // box-shadow の見た目的に -1px
       left: 0;
       right: 0;
       height: 45px;
@@ -113,39 +114,47 @@
         }
       }
     }
+
     &.is-fixed {
       + section {
         margin-top: 100px;
       }
       header {
         position: fixed;
+        height: 50px;
         top: 0;
         overflow: hidden;
         .header-title {
           width: 100%;
           background-color: #cccccc;
           img {
-            height: 60px;
             margin-top: 0;
             padding: 8px;
-          }
-          @media (min-width:1095px) {
-            width: 300px;
           }
         }
         .header-description {
           display: block;
+        }
+        @media (min-width:1095px) {
+          height: 60px;
+          .header-title {
+            width: 300px;
+          }
         }
       }
       nav {
         position: fixed;
         top: 0;
       }
-    }
-    &.is-visible-nav {
-      nav {
-        top: 59px; // box-shadow の見た目的に -1px
+      &.is-visible-nav {
+        nav {
+          top: 49px; // box-shadow の見た目的に -1px
+          @media (min-width:1095px) {
+            top: 59px;
+          }
+        }
       }
     }
+
   }
 </style>

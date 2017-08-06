@@ -47,7 +47,7 @@
       const queue = [
         booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_b5.json`).then(res => res.body),
         articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_16x9.json`).then(res => res.body),
-        aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_other.json`).then(res => res.body)
+        aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.body)
       ]
       return Promise.all(queue).then(results => {
         // sessionStorage 保存
@@ -77,6 +77,7 @@
       font-size: 30px;
       span {
         font-size: 16px;
+        margin-left: 5px;
       }
     }
   }

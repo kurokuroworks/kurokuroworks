@@ -14,5 +14,13 @@
   footer {
     background-color: #555555;
     color: #ffffff;
+    padding: 15px 10px 20px;
+    .title {
+      width: 180px;
+    }
+    .copyright {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 </style>

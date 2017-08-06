@@ -1,11 +1,11 @@
 <template>
   <li class="item-parts" :class="type">
-    <div class="block">
+    <div>
       <template v-if="id">
         <nuxt-link :to="href">
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
           <div class="text">
-            <h3 class="title">{{title}}</h3>
+            <h4 class="title">{{title}}</h4>
             <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
           </div>
@@ -15,7 +15,7 @@
         <a :href="href">
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
           <div class="text">
-            <h3 class="title">{{title}}</h3>
+            <h4 class="title">{{title}}</h4>
             <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
           </div>
@@ -25,7 +25,7 @@
         <div>
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
           <div class="text">
-            <h3 class="title">{{title}}</h3>
+            <h4 class="title">{{title}}</h4>
             <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
           </div>
@@ -48,6 +48,10 @@
     }
     .text {
       padding: 5px;
+      h4 {
+        font-weight: bold;
+        font-size: 18px;
+      }
     }
   }
 </style>
