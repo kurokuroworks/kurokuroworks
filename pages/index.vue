@@ -50,6 +50,7 @@
         aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.body)
       ]
       return Promise.all(queue).then(results => {
+        // TODO 別ファイルにするのは通信回数の無駄なので１ファイルにしたほうがいい
         // sessionStorage 保存
         if (context.isClient && sessionStorage) {
           if (!booksData) sessionStorage.setItem('booksData', JSON.stringify(results[0]))

@@ -5,12 +5,12 @@
       <ul class="item-container">
         <item-parts
           :type="'pickup'"
-          :id="'example'"
-          :href="'example'"
-          :thumbnail="'https://static.kurokuroworks.net/www/dummy/dummy_16x9.jpg'"
-          :title="'example'"
-          :meta="'example'"
-          :description="'example'"
+          :id="pickup.id"
+          :href="pickup.href"
+          :thumbnail="pickup.thumbnail"
+          :title="pickup.title"
+          :meta="pickup.meta"
+          :description="pickup.description"
         ></item-parts>
         <li class="side-container">
           <div class="ads">
@@ -20,7 +20,7 @@
             <p>middle rectangle ads 300x250</p>
           </div>
         </li>
-        <template v-for="item in data">
+        <template v-for="item in articles">
           <item-parts
             :type="'article'"
             :id="item.id"
@@ -32,19 +32,31 @@
           ></item-parts>
         </template>
       </ul>
-      <div>
-        <p>もっと見る</p>
-      </div>
+      <button-parts
+        :href="'#'"
+        :message="'記事をもっとみる'"
+      ></button-parts>
     </div>
   </section>
 </template>
 
 <script>
+  import slice from 'lodash.slice'
   import ItemParts from '~components/parts/item.vue'
+  import ButtonParts from '~components/parts/button.vue'
   export default {
     props: ['data'],
     components: {
-      ItemParts
+      ItemParts,
+      ButtonParts
+    },
+    computed: {
+      pickup() {
+        return this.data[0]
+      },
+      articles() {
+        return slice(this.data, 1, 7)
+      }
     }
   }
 </script>

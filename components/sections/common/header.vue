@@ -85,7 +85,7 @@
       margin-top: -2px; // background-size: cover に対する描画バグ補正
       left: 0;
       right: 0;
-      background-color: #ffffff;
+      background-color: #fafafa;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
       ul {
         display: flex;
@@ -97,16 +97,16 @@
           justify-content: center;
           transition-duration: .3s;
           &:hover {
-            background-color: #cccccc;
+            background-color: #cccccc; // TODO テーマごとに色つける
           }
           &:last-child p {
             border-right: none;
           }
           p {
-            border-right: 1px solid #555555;
+            border-right: 1px solid #dddddd;
             text-align: center;
             line-height: 35px;
-            margin: 5px 0;
+            margin: 6px 0;
             justify-content: center;
             overflow: hidden;
           }
