@@ -73,7 +73,7 @@
       margin: 0;
     }
     .section-title {
-      margin: 0 10px;
+      margin: 0 10px 10px;
       font-size: 30px;
       span {
         font-size: 16px;

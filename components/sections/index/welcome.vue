@@ -12,8 +12,10 @@
 
 <style lang="scss">
   .welcome {
-    height: 400px;
-    background-color: #cccccc;
+    height: 450px;
+    background-image: url("~assets/images/cover_welcome.jpg");
+    background-size: cover;
+    background-position: bottom;
     .chloe {
       @keyframes fuwafuwa {
         0% {

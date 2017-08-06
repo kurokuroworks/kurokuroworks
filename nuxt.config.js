@@ -9,7 +9,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '"くろくろわーくす"は、なのくろと黒曜の技術系サークルです。' }
+      { hid: 'description', name: 'description', content: '"くろくろわーくす"は、かわいいものを作るために、もくもく活動している技術系サークルです。' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

@@ -54,6 +54,7 @@
     .item-container {
       display: flex;
       flex-wrap: wrap;
+      margin-top: -10px;
       .item-parts {
         width: 100%;
         padding: 10px;
