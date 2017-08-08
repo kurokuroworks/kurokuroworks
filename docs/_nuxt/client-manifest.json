@@ -9,23 +9,23 @@
     "img/cover_books.f0c3529.jpg",
     "img/kokuyouwind.36850e6.png",
     "img/logo_white.8eff58f.png",
-    "0.nuxt.bundle.03b916124ed0fd351684.js",
-    "1.nuxt.bundle.3498d8727f117b2a8eb4.js",
-    "2.nuxt.bundle.cb3ab365564b35af270b.js",
+    "0.nuxt.bundle.d63ce3eb3cec837e6d18.js",
+    "1.nuxt.bundle.ca3cc08397519bb98710.js",
+    "2.nuxt.bundle.add695cf74475c8d125a.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.e4d6fb4d7be39a7ddf56.js",
-    "manifest.195c9e01636a99a7f01e.js",
+    "manifest.95d75a5fd72e7b7230b2.js",
     "index.html"
   ],
   "initial": [
-    "manifest.195c9e01636a99a7f01e.js",
+    "manifest.95d75a5fd72e7b7230b2.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.e4d6fb4d7be39a7ddf56.js"
   ],
   "async": [
-    "0.nuxt.bundle.03b916124ed0fd351684.js",
-    "1.nuxt.bundle.3498d8727f117b2a8eb4.js",
-    "2.nuxt.bundle.cb3ab365564b35af270b.js"
+    "0.nuxt.bundle.d63ce3eb3cec837e6d18.js",
+    "1.nuxt.bundle.ca3cc08397519bb98710.js",
+    "2.nuxt.bundle.add695cf74475c8d125a.js"
   ],
   "modules": {
     "17865995": [
@@ -586,6 +586,17 @@
       6,
       0
     ],
+    "9fa55f18": [
+      8,
+      1,
+      7,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
     "758f07d2": [
       9
     ],
@@ -688,6 +699,17 @@
     ],
     "694e8571": [
       9
+    ],
+    "ce9543ae": [
+      8,
+      1,
+      7,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
     ],
     "7fd18034": [
       8,
@@ -868,6 +890,17 @@
       6,
       0
     ],
+    "cf2d4b18": [
+      8,
+      1,
+      7,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
     "4bf4cfe0": [
       8,
       1,
@@ -953,6 +986,17 @@
     ],
     "46e91bde": [
       9
+    ],
+    "4a68f79b": [
+      8,
+      1,
+      7,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
     ],
     "b01b39b4": [
       8,
@@ -1061,6 +1105,17 @@
     ],
     "05ddf1e8": [
       9
+    ],
+    "1f158fa0": [
+      8,
+      1,
+      7,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
     ],
     "5be3ca6b": [
       8,

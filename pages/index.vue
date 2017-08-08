@@ -1,8 +1,9 @@
 <template>
   <div>
+    <WelcomeSection />
     <HeaderSection />
     <ArticlesSection :data="articlesData" />
-    <appsSection />
+    <AppsSection />
     <BooksSection :data="booksData" />
     <AboutsSection :data="aboutsData" />
     <FooterSection />
@@ -13,15 +14,17 @@
   import request from 'superagent'
   import HeaderSection from '~components/sections/common/header.vue'
   import FooterSection from '~components/sections/common/footer.vue'
-  import appsSection from '~components/sections/index/apps.vue'
-  import BooksSection from '~components/sections/index/books.vue'
+  import WelcomeSection from '~components/sections/index/welcome.vue'
   import ArticlesSection from '~components/sections/index/articles.vue'
+  import AppsSection from '~components/sections/index/apps.vue'
+  import BooksSection from '~components/sections/index/books.vue'
   import AboutsSection from '~components/sections/index/abouts.vue'
   export default {
     components: {
       HeaderSection,
       FooterSection,
-      appsSection,
+      WelcomeSection,
+      AppsSection,
       BooksSection,
       ArticlesSection,
       AboutsSection

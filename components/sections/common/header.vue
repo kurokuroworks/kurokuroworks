@@ -25,7 +25,7 @@
     data() {
       return {
         isVisibleMarquee: false,
-        isVisibleNav: false,
+        isVisibleNav: true,
         currentPosition: 0
       }
     },
@@ -33,11 +33,11 @@
       if (window) {
         window.addEventListener('scroll', throttle(() => {
           if (window.innerWidth < 1095) {
-            this.isVisibleMarquee = 180 < window.pageYOffset // TODO スマホではヘッダーの高さを若干短くした方がいい
+            this.isVisibleMarquee = 340 < window.pageYOffset // TODO スマホではヘッダーの高さを若干短くした方がいい
           } else {
-            this.isVisibleMarquee = 180 < window.pageYOffset
+            this.isVisibleMarquee = 340 < window.pageYOffset
           }
-          this.isVisibleNav = 180 > window.pageYOffset || window.pageYOffset < this.currentPosition
+          this.isVisibleNav = 400 > window.pageYOffset || window.pageYOffset < this.currentPosition
           this.currentPosition = window.pageYOffset
         }, 100))
       }
@@ -50,8 +50,8 @@
 
 <style lang="scss">
   .header-container {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 340px;
     left: 0;
     right: 0;
     + section {
@@ -61,24 +61,24 @@
       position: relative;
       z-index: 3;
       height: 60px;
-      background-color: #ffffff;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
       .header-title {
         height: 100%;
         padding: 8px;
-        background-color: #71bfbc;
         width: 100%;
         text-align: center;
         float: left;
         transition-duration: .3s;
+        transition-property: width, height;
+        background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, #00677d 100%);
         img {
           height: 100%;
         }
       }
       .header-marquee {
-        display: none;
-        overflow: hidden;
-        color: #555555;
+        opacity: 0;
+        position: absolute;
+        left: 300px;
       }
     }
     nav {
@@ -90,6 +90,7 @@
       background-color: #555555;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
       transition-duration: .3s;
+      transition-delay: .3s;
       ul {
         display: flex;
         justify-content: center;
@@ -143,12 +144,19 @@
       }
     }
     &.is-visible-marquee {
+      position: fixed;
+      top: 0;
       header {
+        background-color: #ffffff;
         .header-title {
           width: 300px;
+          background-color: #71bfbc;
         }
         .header-marquee {
-          display: block;
+          transition-delay: .3s;
+          transition-duration: .5s;
+          transition-property: opacity;
+          opacity: 1;
           float: left;
           height: 100%;
           padding: 5px 10px;
