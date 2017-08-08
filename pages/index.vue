@@ -1,6 +1,5 @@
 <template>
   <div>
-    <WelcomeSection />
     <HeaderSection />
     <ArticlesSection :data="articlesData" />
     <appsSection />
@@ -14,7 +13,6 @@
   import request from 'superagent'
   import HeaderSection from '~components/sections/common/header.vue'
   import FooterSection from '~components/sections/common/footer.vue'
-  import WelcomeSection from '~components/sections/index/welcome.vue'
   import appsSection from '~components/sections/index/apps.vue'
   import BooksSection from '~components/sections/index/books.vue'
   import ArticlesSection from '~components/sections/index/articles.vue'
@@ -23,7 +21,6 @@
     components: {
       HeaderSection,
       FooterSection,
-      WelcomeSection,
       appsSection,
       BooksSection,
       ArticlesSection,
@@ -45,7 +42,7 @@
       }
       // リソース取得 (sessionStorage or Ajax)
       const queue = [
-        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_b5.json`).then(res => res.body),
+        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/books.json`).then(res => res.body),
         articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_16x9.json`).then(res => res.body),
         aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.body)
       ]
@@ -73,9 +70,32 @@
     &.welcome {
       margin: 0;
     }
+    .cover {
+      width: 100%;
+      height: 300px;
+      margin-bottom: -150px;
+      position: relative;
+      z-index: -1;
+      .base {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+      }
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        opacity: 0.5;
+      }
+    }
     .section-title {
       margin: 0 10px 10px;
       font-size: 30px;
+      color: #ffffff;
       span {
         font-size: 16px;
         margin-left: 5px;

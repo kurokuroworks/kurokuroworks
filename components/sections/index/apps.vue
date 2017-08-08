@@ -1,5 +1,9 @@
 <template>
   <section class="apps">
+    <div class="cover">
+      <div class="base"></div>
+      <div class="wrapper"></div>
+    </div>
     <div class="container">
       <h2 class="section-title">Apps<span>公開中のアプリ</span></h2>
     </div>
@@ -46,6 +50,14 @@
 
 <style lang="scss">
   .apps {
+    .cover {
+      .base {
+        background-image: url("~assets/images/cover_apps.jpg");
+      }
+      .wrapper {
+        background-image: linear-gradient(120deg, #f5749a 0%, #813d51 100%);
+      }
+    }
     .item-container {
       .item {
         position: relative;

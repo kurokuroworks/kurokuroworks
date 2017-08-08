@@ -1,5 +1,9 @@
 <template>
   <section class="articles">
+    <div class="cover">
+      <div class="base"></div>
+      <div class="wrapper"></div>
+    </div>
     <div class="container">
       <h2 class="section-title">Articles<span>記事・ブログ</span></h2>
       <ul class="item-container">
@@ -63,6 +67,14 @@
 
 <style lang="scss">
   .articles {
+    .cover {
+      .base {
+        background-image: url("~assets/images/cover_articles.jpg");
+      }
+      .wrapper {
+        background-image: linear-gradient(120deg, #7963d9 0%, #4a3d85 100%);
+      }
+    }
     .item-container {
       display: flex;
       flex-wrap: wrap;

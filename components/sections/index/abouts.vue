@@ -1,5 +1,9 @@
 <template>
   <section class="abouts about">
+    <div class="cover">
+      <div class="base"></div>
+      <div class="wrapper"></div>
+    </div>
     <div class="container">
       <h2 class="section-title">About<span>サークルについて</span></h2>
       <div class="block">
@@ -43,43 +47,8 @@
           <li class="item-parts">
             <img class="thumbnail" src="~assets/images/chloe.png">
             <div class="text">
-              <h4 class="title">あああ</h4>
-              <p class="meta">イラストレーター</p>
-            </div>
-          </li>
-          <li class="item-parts">
-            <img class="thumbnail" src="~assets/images/chloe.png">
-            <div class="text">
-              <h4 class="title">あああ</h4>
-              <p class="meta">イラストレーター</p>
-            </div>
-          </li>
-          <li class="item-parts">
-            <img class="thumbnail" src="~assets/images/chloe.png">
-            <div class="text">
-              <h4 class="title">あああ</h4>
-              <p class="meta">イラストレーター</p>
-            </div>
-          </li>
-          <li class="item-parts">
-            <img class="thumbnail" src="~assets/images/chloe.png">
-            <div class="text">
-              <h4 class="title">あああ</h4>
-              <p class="meta">イラストレーター</p>
-            </div>
-          </li>
-          <li class="item-parts">
-            <img class="thumbnail" src="~assets/images/chloe.png">
-            <div class="text">
-              <h4 class="title">あああ</h4>
-              <p class="meta">イラストレーター</p>
-            </div>
-          </li>
-          <li class="item-parts">
-            <img class="thumbnail" src="~assets/images/chloe.png">
-            <div class="text">
-              <h4 class="title">あああ</h4>
-              <p class="meta">イラストレーター</p>
+              <h4 class="title">名無しさん</h4>
+              <p class="meta">まだいません</p>
             </div>
           </li>
         </ul>
@@ -99,11 +68,20 @@
 
 <style lang="scss">
   .abouts {
+    .cover {
+      .base {
+        background-image: url("~assets/images/cover_abouts.jpg");
+      }
+      .wrapper {
+        background-image: linear-gradient(120deg, #00add2 0%, #00677d 100%);
+      }
+    }
     .block {
       background-color: #ffffff;
       padding: 10px 0;
       margin-bottom: 20px;
       text-align: center;
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
       h3 {
         font-size: 22px;
         padding: 10px 0 15px;
@@ -122,6 +100,9 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
+            .text {
+              box-shadow: none;
+            }
             img {
               margin: 0 auto;
             }
@@ -150,6 +131,9 @@
             max-width: 180px;
             padding: 10px;
             margin-bottom: 10px;
+            .text {
+              box-shadow: none;
+            }
             img {
               max-height: 180px;
               margin: 0 auto;

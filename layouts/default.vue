@@ -25,8 +25,8 @@
     font-family: 'Noto Sans Japanese', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #555555;
-    background-color: #f5f5f5;
+    color: #444444;
+    background-color: #fafafa;
     font-size: 16px;
     a {
       color: #555555;
