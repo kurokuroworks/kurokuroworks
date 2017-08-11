@@ -4,7 +4,7 @@
       <h2 class="section-title">About<span>サークルについて</span></h2>
       <div class="block">
         <div class="separator">
-          <h3>「かわいい！」を作ります</h3>
+          <h3>「かわいい！」を技術で作ります</h3>
           <img src="~assets/images/chloe.png" />
           <div class="paragraph">
             <p>"くろくろわーくす"は、かわいいものを作るために、もくもく活動している技術系サークルです。</p>
@@ -23,7 +23,8 @@
                 <h4 class="title">なのくろ</h4>
                 <p class="meta">フロントエンドエンジニア</p>
                 <p class="description">
-                  寂しがり。このサイトを作ってるよ。
+                  サークル主がかわいいと思った？？？
+                  残念！さやかちゃんでした！！！
                 </p>
               </div>
             </li>
@@ -33,7 +34,7 @@
                 <h4 class="title">黒曜</h4>
                 <p class="meta">バックエンドエンジニア</p>
                 <p class="description">
-                  関数型言語が好きな数学者。
+                  関数型言語が好きな数学者。ディズニー博士。
                   好きな投影機はカール・ツァイス社製「ツァイスIV型」プラネタリウム。
                 </p>
               </div>
@@ -77,14 +78,14 @@
     .block {
       background-color: #ffffff;
       padding: 10px 0;
-      margin-bottom: 20px;
+      margin: 20px;
       text-align: center;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
       .separator {
         margin:20px 0;
       }
       h3 {
-        font-size: 22px;
+        font-size: 2.5rem;
         padding: 10px 0 15px;
       }
       .paragraph {
