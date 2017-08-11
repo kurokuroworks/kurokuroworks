@@ -14,9 +14,9 @@
 
 <style lang="scss">
   .button-parts {
-    margin: 10px auto;
+    margin: 30px auto;
     border-radius: 3px;
-    background-color: #71bfbc;
+    background-color: #00c4ff;
     max-width: 70%;
     text-align: center;
     p {

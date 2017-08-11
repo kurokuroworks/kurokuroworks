@@ -7,8 +7,8 @@
     margin: 0;
     padding: 0;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
+  p, h1, h2, h3, h4, h5, h6 {
+    font-size: 1.6rem;
     font-weight: normal;
   }
   ul {
@@ -17,11 +17,15 @@
   button, input, select, textarea {
     margin: 0;
   }
-  html {
-    box-sizing: border-box;
-  }
   *, *:before, *:after {
     box-sizing: border-box;
+  }
+  html {
+    font-size:62.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 1.6rem;
   }
   img, embed, iframe, object, audio, video {
     height: auto;

@@ -1,60 +1,60 @@
 <template>
   <section class="abouts about">
-    <div class="cover">
-      <div class="base"></div>
-      <div class="wrapper"></div>
-    </div>
     <div class="container">
       <h2 class="section-title">About<span>サークルについて</span></h2>
       <div class="block">
-        <h3>「かわいい！」を作ります</h3>
-        <img src="~assets/images/chloe.png" />
-        <div class="paragraph">
-          <p>"くろくろわーくす"は、かわいいものを作るために、もくもく活動している技術系サークルです。</p>
-          <p>Webアプリ開発、Androidアプリ開発、技術誌発行、デザイン、映像制作など多分野で雑多に作業しています。</p>
-          <p>かわいいは正義なので、かわいいと思うものに技術を注ぎ込みたいと思っています。</p>
+        <div class="separator">
+          <h3>「かわいい！」を作ります</h3>
+          <img src="~assets/images/chloe.png" />
+          <div class="paragraph">
+            <p>"くろくろわーくす"は、かわいいものを作るために、もくもく活動している技術系サークルです。</p>
+            <p>Webアプリ開発、Androidアプリ開発、技術誌発行、デザイン、映像制作など多分野で雑多に作業しています。</p>
+            <p>かわいいは正義なので、かわいいと思うものに技術を注ぎ込みたいと思っています。</p>
+          </div>
         </div>
       </div>
-      <div class="block staff">
-        <h3 class="subtitle">サークルのなかのひと</h3>
-        <ul class="item-container">
-          <li class="item-parts">
-            <img class="thumbnail" src="~assets/images/nanocloudx.png">
-            <div class="text">
-              <h4 class="title">なのくろ</h4>
-              <p class="meta">フロントエンドエンジニア</p>
-              <p class="description">
-                寂しがり。このサイトを作ってるよ。
-              </p>
-            </div>
-          </li>
-          <li class="item-parts">
-            <img class="thumbnail" src="~assets/images/kokuyouwind.png">
-            <div class="text">
-              <h4 class="title">黒曜</h4>
-              <p class="meta">バックエンドエンジニア</p>
-              <p class="description">
-                関数型言語が好きな数学者。
-                好きな投影機はカール・ツァイス社製「ツァイスIV型」プラネタリウム。
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="block contributor">
-        <h3 class="subtitle">Special thanks!</h3>
-        <ul class="item-container">
-          <li class="item-parts">
-            <img class="thumbnail" src="~assets/images/chloe.png">
-            <div class="text">
-              <h4 class="title">名無しさん</h4>
-              <p class="meta">まだいません</p>
-            </div>
-          </li>
-        </ul>
-        <div class="paragraph">
-          <p>"くろくろわーくす"では、かわいいものに魂を吹き込むエンジニア、かわいい絵が描けるイラストレーターを募集しています。</p>
-          <p>同人活動に興味があり、一緒に作ってみたい方は @nanocloudx まで気兼ねなくご連絡をお待ちしております（ ＾ω＾）</p>
+      <div class="block">
+        <div class="separator staff">
+          <h3 class="subtitle">サークルのなかのひと</h3>
+          <ul class="item-container">
+            <li class="item-parts">
+              <img class="thumbnail" src="~assets/images/nanocloudx.png">
+              <div class="text">
+                <h4 class="title">なのくろ</h4>
+                <p class="meta">フロントエンドエンジニア</p>
+                <p class="description">
+                  寂しがり。このサイトを作ってるよ。
+                </p>
+              </div>
+            </li>
+            <li class="item-parts">
+              <img class="thumbnail" src="~assets/images/kokuyouwind.png">
+              <div class="text">
+                <h4 class="title">黒曜</h4>
+                <p class="meta">バックエンドエンジニア</p>
+                <p class="description">
+                  関数型言語が好きな数学者。
+                  好きな投影機はカール・ツァイス社製「ツァイスIV型」プラネタリウム。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="separator contributor">
+          <h3 class="subtitle">Special thanks!</h3>
+          <ul class="item-container">
+            <li class="item-parts">
+              <img class="thumbnail" src="~assets/images/chloe.png">
+              <div class="text">
+                <h4 class="title">名無しさん</h4>
+                <p class="meta">まだいません</p>
+              </div>
+            </li>
+          </ul>
+          <div class="paragraph">
+            <p>"くろくろわーくす"では、かわいいものに魂を吹き込むエンジニア、かわいい絵が描けるイラストレーターを募集しています。</p>
+            <p>同人活動に興味があり、一緒に作ってみたい方は @nanocloudx まで気兼ねなくご連絡をお待ちしております（ ＾ω＾）</p>
+          </div>
         </div>
       </div>
     </div>
@@ -68,13 +68,11 @@
 
 <style lang="scss">
   .abouts {
-    .cover {
-      .base {
-        background-image: url("~assets/images/cover_abouts.jpg");
-      }
-      .wrapper {
-        background-image: linear-gradient(120deg, #00add2 0%, #00677d 100%);
-      }
+    background-image: url("~assets/images/cover_welcome.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .section-title {
+      color: #ffffff;
     }
     .block {
       background-color: #ffffff;
@@ -82,6 +80,9 @@
       margin-bottom: 20px;
       text-align: center;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+      .separator {
+        margin:20px 0;
+      }
       h3 {
         font-size: 22px;
         padding: 10px 0 15px;
@@ -89,10 +90,10 @@
       .paragraph {
         padding: 10px;
       }
-      &.about {
+      .about {
 
       }
-      &.staff {
+      .staff {
         .item-container {
           display: flex;
           flex-direction: column;
@@ -121,7 +122,7 @@
           }
         }
       }
-      &.contributor {
+      .contributor {
         .item-container {
           display: flex;
           flex-wrap: wrap;

@@ -63,9 +63,6 @@
 
 <style lang="scss">
   .articles {
-    .section-title {
-      color: #555555;
-    }
     .item-container {
       display: flex;
       flex-wrap: wrap;

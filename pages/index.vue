@@ -1,7 +1,7 @@
 <template>
   <div>
-    <WelcomeSection />
     <HeaderSection />
+    <WelcomeSection />
     <ArticlesSection :data="articlesData" />
     <AppsSection />
     <BooksSection :data="booksData" />
@@ -69,40 +69,16 @@
 
 <style lang="scss">
   section {
-    margin-bottom: 50px;
-    &.welcome {
-      margin: 0;
-    }
-    .cover {
-      width: 100%;
-      height: 300px;
-      margin-bottom: -150px;
-      position: relative;
-      z-index: -1;
-      .base {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 0;
-        background-size: cover;
-        background-position: center;
-      }
-      .wrapper {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
-        opacity: 0.5;
-      }
-    }
+    padding-top: 50px;
     .section-title {
-      margin: 0 10px 10px;
-      font-size: 30px;
-      color: #ffffff;
+      text-align: center;
+      margin: 30px 10px;
+      font-size: 40px;
       span {
-        font-size: 16px;
+        font-size: 20px;
         margin-left: 5px;
       }
     }
+    padding-bottom: 50px;
   }
 </style>
