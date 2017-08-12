@@ -1,15 +1,23 @@
 <template>
-  <section>
+  <div>
+    <header-parts></header-parts>
     <div class="container">
       <div v-html="content"></div>
     </div>
-  </section>
+    <footer-parts></footer-parts>
+  </div>
 </template>
 
 <script>
   import request from 'superagent'
   import marked from 'marked'
+  import HeaderParts from '~components/parts/header.vue'
+  import FooterParts from '~components/parts/footer.vue'
   export default {
+    components: {
+      HeaderParts,
+      FooterParts
+    },
     validate(context) {
       let articles
       if (context.isClient && sessionStorage) {

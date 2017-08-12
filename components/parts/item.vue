@@ -47,10 +47,13 @@
       display: block;
     }
     .text {
-      padding: 5px;
-      h4 {
+      padding: 10px;
+      .title {
         font-weight: bold;
         font-size: 18px;
+      }
+      .meta, .description {
+        margin-top: 4px;
       }
       box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     }

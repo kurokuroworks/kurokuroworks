@@ -51,10 +51,21 @@ module.exports = {
   generate: {
     dir: 'docs',
     routes: () => {
-      return request.get('https://static.kurokuroworks.net/www/articles.json').then(res => {
-        return res.body.map(item => {
-          return `/articles/${item.id}`
+      return Promise.all([
+        request.get('https://static.kurokuroworks.net/www/articles.json'),
+        request.get('https://static.kurokuroworks.net/www/books.json')
+      ]).then(results => {
+        const urls = results.map((res, index) => {
+          return res.body.map(item => {
+            if (index === 0) {
+              return `/articles/${item.id}`
+            }
+            if (index === 1) {
+              return `/books/${item.id}`
+            }
+          })
         })
+        return [].concat(urls[0],urls[1])
       })
     }
   }

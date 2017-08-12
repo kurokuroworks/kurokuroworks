@@ -52,7 +52,7 @@
         @media (min-width: 735px) { // 720 + 15
           width: 180px;
         }
-        @media (min-width:1095px) {
+        @media (min-width:1095px) { // 1080 + 15
           width: 216px;
         }
       }

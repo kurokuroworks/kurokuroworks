@@ -1,33 +1,30 @@
 <template>
   <div>
-    <HeaderSection />
     <WelcomeSection />
     <ArticlesSection :data="articlesData" />
     <AppsSection />
     <BooksSection :data="booksData" />
     <AboutsSection :staff="staffData" :contributor="contributorData"/>
-    <FooterSection />
+    <footer-parts></footer-parts>
   </div>
 </template>
 
 <script>
   import request from 'superagent'
-  import HeaderSection from '~components/sections/common/header.vue'
-  import FooterSection from '~components/sections/common/footer.vue'
   import WelcomeSection from '~components/sections/index/welcome.vue'
   import ArticlesSection from '~components/sections/index/articles.vue'
   import AppsSection from '~components/sections/index/apps.vue'
   import BooksSection from '~components/sections/index/books.vue'
   import AboutsSection from '~components/sections/index/abouts.vue'
+  import FooterParts from '~components/parts/footer.vue'
   export default {
     components: {
-      HeaderSection,
-      FooterSection,
       WelcomeSection,
       AppsSection,
       BooksSection,
       ArticlesSection,
-      AboutsSection
+      AboutsSection,
+      FooterParts
     },
     asyncData(context) {
       // NOTICE

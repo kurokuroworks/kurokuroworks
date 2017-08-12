@@ -7,7 +7,7 @@
       </div>
       <ul class="item-container">
         <item-parts
-          :type="'pickup'"
+          :type="'articles'"
           :id="pickup.id"
           :href="pickup.href"
           :thumbnail="pickup.thumbnail"
@@ -25,7 +25,7 @@
         </li>
         <template v-for="item in articles">
           <item-parts
-            :type="'article'"
+            :type="'articles'"
             :id="item.id"
             :href="item.href"
             :thumbnail="item.thumbnail"
@@ -81,7 +81,7 @@
         }
         @media screen and (min-width: 735px) { // 720 + 15
           width: 360px;
-          &.pickup {
+          &:first-child {
             width: 720px;
           }
         }

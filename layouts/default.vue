@@ -27,6 +27,12 @@
     url("/fonts/jk_gothic_m.woff") format('woff');
   }
   body {
+    .page-enter-active, .page-leave-active {
+      transition-duration: .3s;
+    }
+    .page-enter, .page-leave-active {
+      opacity: 0;
+    }
     font-family: 'JK Gothic M', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
