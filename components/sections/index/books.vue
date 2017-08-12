@@ -17,16 +17,22 @@
           ></item-parts>
         </template>
       </ul>
+      <button-parts
+        :href="'#'"
+        :message="'もっとみる'"
+      ></button-parts>
     </div>
   </section>
 </template>
 
 <script>
   import ItemParts from '~components/parts/item.vue'
+  import ButtonParts from '~components/parts/button.vue'
   export default {
     props: ['data'],
     components: {
-      ItemParts
+      ItemParts,
+      ButtonParts
     }
   }
 </script>
@@ -43,8 +49,11 @@
         .text {
           background-color: #ffffff;
         }
-        @media screen and (min-width: 735px) { // 720 + 15
+        @media (min-width: 735px) { // 720 + 15
           width: 180px;
+        }
+        @media (min-width:1095px) {
+          width: 216px;
         }
       }
     }

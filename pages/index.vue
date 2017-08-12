@@ -5,7 +5,7 @@
     <ArticlesSection :data="articlesData" />
     <AppsSection />
     <BooksSection :data="booksData" />
-    <AboutsSection :data="aboutsData" />
+    <AboutsSection :staff="staffData" :contributor="contributorData"/>
     <FooterSection />
   </div>
 </template>
@@ -46,7 +46,7 @@
       // リソース取得 (sessionStorage or Ajax)
       const queue = [
         booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/books.json`).then(res => res.body),
-        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/dummy/dummy_16x9.json`).then(res => res.body),
+        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.body),
         aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.body)
       ]
       return Promise.all(queue).then(results => {
@@ -60,7 +60,8 @@
         return {
           booksData: results[0],
           articlesData: results[1],
-          aboutsData: results[2],
+          staffData: results[2][0], // TODO わけがわからんので直すべき。ってか１ファイルにする。
+          contributorData: results[2][1],
         }
       })
     }

@@ -37,7 +37,7 @@
       </ul>
       <button-parts
         :href="'#'"
-        :message="'記事をもっとみる'"
+        :message="'もっとみる'"
       ></button-parts>
     </div>
   </section>

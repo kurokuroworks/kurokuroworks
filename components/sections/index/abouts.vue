@@ -20,54 +20,28 @@
         <div class="separator staff">
           <h3 class="subtitle">サークルのなかのひと</h3>
           <ul class="item-container">
-            <li class="item-parts">
-              <img class="thumbnail" src="~assets/images/nanocloudx.png">
-              <div class="text">
-                <h4 class="title">なのくろ</h4>
-                <p class="meta">フロントエンドエンジニア</p>
-                <p class="description">
-                  サークル主がかわいいと思った？？？
-                  残念！さやかちゃんでした！！！
-                </p>
-              </div>
-            </li>
-            <li class="item-parts">
-              <img class="thumbnail" src="~assets/images/kokuyouwind.png">
-              <div class="text">
-                <h4 class="title">黒曜</h4>
-                <p class="meta">バックエンドエンジニア</p>
-                <p class="description">
-                  関数型言語が好きな数学者。ディズニー博士。
-                  好きな投影機はカール・ツァイス社製「ツァイスIV型」プラネタリウム。
-                </p>
-              </div>
-            </li>
+            <template v-for="item in staff">
+              <item-parts
+                :href="item.href"
+                :thumbnail="item.thumbnail"
+                :title="item.title"
+                :meta="item.meta"
+                :description="item.description"
+              ></item-parts>
+            </template>
           </ul>
         </div>
         <div class="separator contributor">
           <h3 class="subtitle">Special thanks!</h3>
           <ul class="item-container">
-            <li class="item-parts">
-              <img class="thumbnail" src="~assets/images/anonymous.png">
-              <div class="text">
-                <h4 class="title">名無しさん</h4>
-                <p class="meta">ボット</p>
-              </div>
-            </li>
-            <li class="item-parts">
-              <img class="thumbnail" src="~assets/images/anonymous.png">
-              <div class="text">
-                <h4 class="title">名無しさん</h4>
-                <p class="meta">イラストレーター</p>
-              </div>
-            </li>
-            <li class="item-parts">
-              <img class="thumbnail" src="~assets/images/anonymous.png">
-              <div class="text">
-                <h4 class="title">名無しさん</h4>
-                <p class="meta">イラストレーター</p>
-              </div>
-            </li>
+            <template v-for="item in contributor">
+              <item-parts
+                :href="item.href"
+                :thumbnail="item.thumbnail"
+                :title="item.title"
+                :meta="item.meta"
+              ></item-parts>
+            </template>
           </ul>
           <div class="paragraph">
             <p>"くろくろわーくす"では、かわいいものに魂を吹き込むエンジニア、かわいい絵が描けるイラストレーターを募集しています。</p>
@@ -80,7 +54,12 @@
 </template>
 
 <script>
+  import ItemParts from '~components/parts/item.vue'
   export default {
+    props: ['staff', 'contributor'],
+    components: {
+      ItemParts
+    }
   }
 </script>
 

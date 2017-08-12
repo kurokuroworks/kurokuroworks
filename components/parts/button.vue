@@ -21,7 +21,8 @@
     text-align: center;
     p {
       color: #ffffff;
-      padding: 15px;
+      padding: 20px;
+      font-size: 2rem;
     }
   }
 </style>
