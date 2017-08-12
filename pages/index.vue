@@ -70,6 +70,7 @@
 <style lang="scss">
   section {
     padding-top: 50px;
+    padding-bottom: 50px;
     .section-title {
       text-align: center;
       margin: 30px 10px;
@@ -80,6 +81,5 @@
         font-size: 20px;
       }
     }
-    padding-bottom: 50px;
   }
 </style>

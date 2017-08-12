@@ -24,11 +24,12 @@
 
 <style lang="scss">
   .welcome + section {
-    margin-top: -50px;
+    padding-top: 0;
   }
   .welcome {
     overflow: hidden;
     padding-top: 0;
+    padding-bottom: 0;
     .main {
       width: 100%;
       min-height: 500px;

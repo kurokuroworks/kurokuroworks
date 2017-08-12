@@ -2,7 +2,7 @@
   <section class="articles">
     <div class="container">
       <div class="section-title">
-        <h2>記事・ブログ</h2>
+        <h2>記事・お知らせ</h2>
         <p>Articles</p>
       </div>
       <ul class="item-container">

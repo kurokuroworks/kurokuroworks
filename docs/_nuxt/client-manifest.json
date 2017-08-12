@@ -6,22 +6,22 @@
     "img/cover_welcome.b4d199f.jpg",
     "img/kokuyouwind.36850e6.png",
     "img/nanocloudx.5a2d073.png",
-    "0.nuxt.bundle.d8b61e0a1dd0b9228e75.js",
+    "0.nuxt.bundle.4a531bda2cf68d00c6e0.js",
     "img/logo_white.8eff58f.png",
     "2.nuxt.bundle.9f788ec4a3c7eda4f832.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.e4d6fb4d7be39a7ddf56.js",
-    "manifest.ee37426fd231007a4ef0.js",
+    "manifest.0bf131c95680f96eee9c.js",
     "index.html"
   ],
   "initial": [
-    "manifest.ee37426fd231007a4ef0.js",
+    "manifest.0bf131c95680f96eee9c.js",
     "vendor.bundle.03461ad09f7570f8bdcf.js",
     "nuxt.bundle.e4d6fb4d7be39a7ddf56.js"
   ],
   "async": [
     "1.nuxt.bundle.d0865f00cf1df17a8439.js",
-    "0.nuxt.bundle.d8b61e0a1dd0b9228e75.js",
+    "0.nuxt.bundle.4a531bda2cf68d00c6e0.js",
     "2.nuxt.bundle.9f788ec4a3c7eda4f832.js"
   ],
   "modules": {
