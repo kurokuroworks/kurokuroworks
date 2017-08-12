@@ -35,6 +35,7 @@
       min-height: 500px;
       height: 80vh;
       background-size: cover;
+      background-color: #33bbff;
       background-image: url("~assets/images/cover_welcome.jpg");
       .logo {
         height: 80px;
@@ -47,7 +48,7 @@
         position: absolute;
         z-index: 2;
         text-shadow: 0 0 10px #555555;
-        top: -100px;
+        top: 300px;
         bottom:0;
         left: 0;
         right: 0;
@@ -64,12 +65,28 @@
         }
       }
       .chloe {
-        display: none;
         position: absolute;
         z-index: 1;
-        width: 600px;
-        bottom: 0;
+        width: 300px;
+        top: 40px;
+        left: 0;
         right: 0;
+        margin: auto;
+        @keyframes fuwafuwa {
+          0% {
+            top: 40px;
+            filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.4));
+          }
+          50% {
+            top: 70px;
+            filter: drop-shadow(10px 10px 0 rgba(0,0,0,0.2));
+          }
+          100% {
+            top: 40px;
+            filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.4));
+          }
+        }
+        animation: fuwafuwa 3s infinite;
       }
       @media (min-width: 450px) {
         .message {
@@ -80,10 +97,16 @@
             font-size: 2rem;
           }
         }
+        .chloe {
+          top: 50px;
+          width: 350px;
+        }
       }
       @media (min-width: 1100px) {
         .message {
           text-align: left;
+          top: -80px;
+          bottom: 0;
           left: inherit;
           right: inherit;
           h2 {
@@ -95,7 +118,10 @@
           }
         }
         .chloe {
-          display: block;
+          width: 600px;
+          bottom: 0;
+          left: inherit;
+          right: 0;
         }
       }
     }
