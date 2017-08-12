@@ -16,7 +16,7 @@
   .button-parts {
     margin: 30px auto;
     border-radius: 3px;
-    background-color: #00c4ff;
+    background-color: #33bbff;
     max-width: 70%;
     text-align: center;
     p {

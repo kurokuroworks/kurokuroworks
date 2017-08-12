@@ -45,6 +45,8 @@
       }
       .message {
         position: absolute;
+        z-index: 2;
+        text-shadow: 0 0 10px #555555;
         top: -100px;
         bottom:0;
         left: 0;
@@ -57,14 +59,14 @@
           font-size: 3rem;
         }
         p {
-          margin-top: 10px;
+          margin-top: 20px;
           font-size: 1.6rem;
         }
       }
       .chloe {
         display: none;
         position: absolute;
-        z-index:4;
+        z-index: 1;
         width: 600px;
         bottom: 0;
         right: 0;

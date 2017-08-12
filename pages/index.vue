@@ -76,9 +76,11 @@
       margin: 30px 10px;
       h2 {
         font-size: 32px;
+        line-height: 40px;
       }
       p {
         font-size: 20px;
+        line-height: 30px;
       }
     }
   }

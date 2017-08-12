@@ -20,12 +20,17 @@
 </script>
 
 <style lang="scss">
-  @import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+  @font-face {
+    font-family: 'JK Gothic M';
+    font-style: normal;
+    src: url("/fonts/jk_gothic_m.woff2") format('woff2'),
+    url("/fonts/jk_gothic_m.woff") format('woff');
+  }
   body {
-    font-family: 'Noto Sans Japanese', sans-serif;
+    font-family: 'JK Gothic M', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #444444;
+    color: #555555;
     background-color: #fafafa;
     font-size: 16px;
     a {
