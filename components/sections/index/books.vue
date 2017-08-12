@@ -8,7 +8,7 @@
       <ul class="item-container">
         <template v-for="item in data">
           <item-parts
-            :type="'book'"
+            :type="'books'"
             :id="item.id"
             :href="item.href"
             :thumbnail="item.thumbnail"

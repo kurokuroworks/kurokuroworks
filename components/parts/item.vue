@@ -2,7 +2,7 @@
   <li class="item-parts" :class="type">
     <div>
       <template v-if="id">
-        <nuxt-link :to="href">
+        <nuxt-link :to="`/${type}/${id}`">
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
           <div class="text">
             <h4 class="title">{{title}}</h4>
