@@ -1,7 +1,10 @@
 <template>
   <section class="books">
     <div class="container">
-      <h2 class="section-title">Books<span>技術誌・同人誌</span></h2>
+      <div class="section-title">
+        <h2>技術誌・同人誌</h2>
+        <p>Books</p>
+      </div>
       <ul class="item-container">
         <template v-for="item in data">
           <item-parts

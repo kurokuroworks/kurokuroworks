@@ -1,7 +1,10 @@
 <template>
   <section class="articles">
     <div class="container">
-      <h2 class="section-title">Articles<span>記事・ブログ</span></h2>
+      <div class="section-title">
+        <h2>記事・ブログ</h2>
+        <p>Articles</p>
+      </div>
       <ul class="item-container">
         <item-parts
           :type="'pickup'"

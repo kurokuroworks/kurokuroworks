@@ -1,7 +1,10 @@
 <template>
   <section class="abouts about">
     <div class="container">
-      <h2 class="section-title">About<span>サークルについて</span></h2>
+      <div class="section-title">
+        <h2>サークルについて</h2>
+        <p>About</p>
+      </div>
       <div class="block">
         <div class="separator">
           <h3>「かわいい！」を技術で作ります</h3>

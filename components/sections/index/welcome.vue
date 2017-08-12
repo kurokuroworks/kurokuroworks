@@ -9,6 +9,7 @@
           <h2>「かわいい！」を技術で作ります</h2>
           <p>ゆるふわ開発サークル"くろくろわーくす"</p>
         </div>
+        <img class="chloe" src="~assets/images/chloe.png" />
       </div>
     </div>
     <div class="cutter"></div>
@@ -22,14 +23,16 @@
 </script>
 
 <style lang="scss">
+  .welcome + section {
+    margin-top: -50px;
+  }
   .welcome {
-    height: 90vh;
     overflow: hidden;
     padding-top: 0;
-    margin-bottom: -80px;
     .main {
       width: 100%;
-      height: 100vh;
+      min-height: 500px;
+      height: 80vh;
       background-size: cover;
       background-image: url("~assets/images/cover_welcome.jpg");
       .logo {
@@ -40,7 +43,13 @@
         }
       }
       .message {
-        padding: 23vh 20px;
+        position: absolute;
+        top: -100px;
+        bottom:0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 150px;
         text-align: center;
         color: #ffffff;
         h2 {
@@ -50,7 +59,17 @@
           margin-top: 10px;
           font-size: 1.6rem;
         }
-        @media (min-width: 450px) {
+      }
+      .chloe {
+        display: none;
+        position: absolute;
+        z-index:4;
+        width: 600px;
+        bottom: 0;
+        right: 0;
+      }
+      @media (min-width: 450px) {
+        .message {
           h2 {
             font-size: 4rem;
           }
@@ -58,24 +77,41 @@
             font-size: 2rem;
           }
         }
-        @media (min-width: 1100px) {
+      }
+      @media (min-width: 1100px) {
+        .message {
+          text-align: left;
+          left: inherit;
+          right: inherit;
           h2 {
             font-size: 5rem;
           }
           p {
             font-size: 2.5rem;
+            padding-left: 30px;
           }
+        }
+        .chloe {
+          display: block;
         }
       }
     }
     .cutter {
       position: relative;
-      z-index: 3;
-      background-color: #fafafa;
-      width: 120vw;
+      background-color: #555555;
+      width: 120%;
       height: 200px;
-      margin: -150px -10% 0;
-      transform: rotate(-3deg);
+      margin: 0 -10% -150px;
+      transform: rotate(3deg);
+      &:before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 400px;
+        margin: 0 -10% 0;
+        background: #fafafa;
+        transform: rotate(-6deg);
+      }
     }
   }
 </style>

@@ -73,10 +73,11 @@
     .section-title {
       text-align: center;
       margin: 30px 10px;
-      font-size: 40px;
-      span {
+      h2 {
+        font-size: 32px;
+      }
+      p {
         font-size: 20px;
-        margin-left: 5px;
       }
     }
     padding-bottom: 50px;
