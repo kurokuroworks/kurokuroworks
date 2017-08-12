@@ -19,7 +19,9 @@
 <style lang="scss">
   .apps {
     text-align: center;
-    background-color: #333333;
+    background-image: url("~assets/images/cover_apps.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #ffffff;
   }
 </style>

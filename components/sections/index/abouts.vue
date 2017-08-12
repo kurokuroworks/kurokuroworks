@@ -48,10 +48,24 @@
           <h3 class="subtitle">Special thanks!</h3>
           <ul class="item-container">
             <li class="item-parts">
-              <img class="thumbnail" src="~assets/images/chloe.png">
+              <img class="thumbnail" src="~assets/images/anonymous.png">
               <div class="text">
                 <h4 class="title">名無しさん</h4>
-                <p class="meta">まだいません</p>
+                <p class="meta">ボット</p>
+              </div>
+            </li>
+            <li class="item-parts">
+              <img class="thumbnail" src="~assets/images/anonymous.png">
+              <div class="text">
+                <h4 class="title">名無しさん</h4>
+                <p class="meta">イラストレーター</p>
+              </div>
+            </li>
+            <li class="item-parts">
+              <img class="thumbnail" src="~assets/images/anonymous.png">
+              <div class="text">
+                <h4 class="title">名無しさん</h4>
+                <p class="meta">イラストレーター</p>
               </div>
             </li>
           </ul>
@@ -72,7 +86,7 @@
 
 <style lang="scss">
   .abouts {
-    background-image: url("~assets/images/cover_welcome.jpg");
+    background-image: url("~assets/images/cover_abouts.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     .section-title {
