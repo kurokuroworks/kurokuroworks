@@ -126,14 +126,14 @@
           justify-content: center;
           .item-parts {
             width: 50%;
-            max-width: 180px;
+            max-width: 135px;
             padding: 10px;
             margin-bottom: 10px;
             .text {
               box-shadow: none;
             }
             img {
-              max-height: 180px;
+              max-height: 135px;
               margin: 0 auto;
             }
           }

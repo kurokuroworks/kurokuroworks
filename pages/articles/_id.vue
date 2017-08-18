@@ -1,9 +1,7 @@
 <template>
   <div>
     <header-parts></header-parts>
-    <div class="container">
-      <div v-html="content"></div>
-    </div>
+    <ArticleSection :data="content" />
     <footer-parts></footer-parts>
   </div>
 </template>
@@ -13,10 +11,12 @@
   import marked from 'marked'
   import HeaderParts from '~components/parts/header.vue'
   import FooterParts from '~components/parts/footer.vue'
+  import ArticleSection from '~components/sections/articles/article.vue'
   export default {
     components: {
       HeaderParts,
-      FooterParts
+      FooterParts,
+      ArticleSection
     },
     validate(context) {
       let articles
