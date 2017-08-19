@@ -1,7 +1,7 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "1.nuxt.bundle.d41dff8a6f859a8142eb.js",
+    "1.nuxt.bundle.f75e62fa5dd8e863e7b2.js",
     "img/logo_white.8eff58f.png",
     "img/chloe.67ad6e3.png",
     "img/cover_abouts.b4d199f.jpg",
@@ -12,16 +12,16 @@
     "3.nuxt.bundle.98db08aa37ec0f034e1e.js",
     "vendor.bundle.38b064e09b2b425686c5.js",
     "nuxt.bundle.cdf4914db0d6ec2f2f90.js",
-    "manifest.dc643d004e2f5420543c.js",
+    "manifest.792e764491776147084e.js",
     "index.html"
   ],
   "initial": [
-    "manifest.dc643d004e2f5420543c.js",
+    "manifest.792e764491776147084e.js",
     "vendor.bundle.38b064e09b2b425686c5.js",
     "nuxt.bundle.cdf4914db0d6ec2f2f90.js"
   ],
   "async": [
-    "1.nuxt.bundle.d41dff8a6f859a8142eb.js",
+    "1.nuxt.bundle.f75e62fa5dd8e863e7b2.js",
     "0.nuxt.bundle.610ac4b68303a5c66c67.js",
     "2.nuxt.bundle.b2ea48d0ee36c48f97dd.js",
     "3.nuxt.bundle.98db08aa37ec0f034e1e.js"

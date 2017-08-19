@@ -40,7 +40,7 @@
         article = sessionStorage.getItem(`articles/${context.params.id}`)
       }
       const queue = [
-        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.body),
+        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.text),
         article ? article : request.get(`${context.env.staticBaseUrl}/www/articles/${context.params.id}/${context.params.id}.md`).then(res => res.text)
       ]
       return Promise.all(queue).then(results => {
@@ -48,11 +48,8 @@
           if (!articlesData) sessionStorage.setItem('articlesData', JSON.stringify(results[0]))
           if (!article) sessionStorage.setItem(`articles/${context.params.id}`, results[1])
         }
-        if (typeof results[0] === 'string') {
-          results[0] = JSON.parse(results[0])
-        }
         return {
-          meta: results[0].filter(item => {
+          meta: JSON.parse(results[0]).filter(item => {
             return item.id === context.params.id
           })[0],
           content: marked(results[1])
