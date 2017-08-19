@@ -32,8 +32,7 @@
     padding-bottom: 0;
     .main {
       width: 100%;
-      min-height: 500px;
-      height: 80vh;
+      height: 600px;
       background-size: cover;
       background-color: #33bbff;
       background-image: url("~assets/images/cover_welcome.jpg");
@@ -48,19 +47,17 @@
         position: absolute;
         z-index: 2;
         text-shadow: 0 0 10px #555555;
-        top: 300px;
-        bottom:0;
+        top: 450px;
         left: 0;
         right: 0;
-        margin: auto;
         height: 150px;
         text-align: center;
         color: #ffffff;
         h2 {
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
         p {
-          margin-top: 20px;
+          margin-top: 10px;
           font-size: 1.6rem;
         }
       }
@@ -90,7 +87,7 @@
       @media (min-width: 450px) {
         .message {
           h2 {
-            font-size: 4rem;
+            font-size: 3.8rem;
           }
           p {
             font-size: 2rem;
@@ -102,11 +99,9 @@
       }
       @media (min-width: 1100px) {
         .message {
+          position: relative;
           text-align: left;
-          top: -80px;
-          bottom: 0;
-          left: inherit;
-          right: inherit;
+          top: 200px;
           h2 {
             font-size: 5rem;
           }
@@ -116,10 +111,8 @@
           }
         }
         .chloe {
-          position: relative;
-          float: right;
-          margin-top: -120px;
-          margin-right: -100px;
+          position: absolute;
+          left: 600px;
           width: 550px;
         }
       }

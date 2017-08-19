@@ -23,7 +23,7 @@
   export default {
     data() {
       return {
-        isVisible: false,
+        isVisible: true,
         currentPosition: 0
       }
     },
@@ -39,6 +39,9 @@
 </script>
 
 <style lang="scss">
+  .header-parts + * {
+    margin-top: 80px;
+  }
   .header-parts {
     position: fixed;
     z-index: 100;
