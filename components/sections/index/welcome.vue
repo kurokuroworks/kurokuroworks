@@ -68,21 +68,20 @@
         position: absolute;
         z-index: 1;
         width: 300px;
-        top: 40px;
         left: 0;
         right: 0;
         margin: auto;
         @keyframes fuwafuwa {
           0% {
-            top: 40px;
+            top: 50px;
             filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.4));
           }
           50% {
-            top: 70px;
+            top: 80px;
             filter: drop-shadow(10px 10px 0 rgba(0,0,0,0.2));
           }
           100% {
-            top: 40px;
+            top: 50px;
             filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.4));
           }
         }
@@ -98,7 +97,6 @@
           }
         }
         .chloe {
-          top: 50px;
           width: 350px;
         }
       }
@@ -118,10 +116,11 @@
           }
         }
         .chloe {
-          width: 600px;
-          bottom: 0;
-          left: inherit;
-          right: 0;
+          position: relative;
+          float: right;
+          margin-top: -120px;
+          margin-right: -100px;
+          width: 550px;
         }
       }
     }
