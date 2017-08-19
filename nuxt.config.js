@@ -56,7 +56,8 @@ module.exports = {
         request.get('https://static.kurokuroworks.net/www/books.json')
       ]).then(results => {
         const urls = results.map((res, index) => {
-          return res.body.map(item => {
+          const data = JSON.parse(res.text)
+          return data.map(item => {
             if (index === 0) {
               return `/articles/${item.id}`
             }
