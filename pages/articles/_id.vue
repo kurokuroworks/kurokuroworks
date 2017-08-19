@@ -45,7 +45,7 @@
       ]
       return Promise.all(queue).then(results => {
         if (context.isClient && sessionStorage) {
-          if (!articlesData) sessionStorage.setItem('articlesData', JSON.stringify(results[0]))
+          if (!articlesData) sessionStorage.setItem('articlesData', results[0])
           if (!article) sessionStorage.setItem(`articles/${context.params.id}`, results[1])
         }
         return {

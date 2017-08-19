@@ -36,29 +36,29 @@
       let booksData, articlesData, aboutsData
       // sessionStorage 読込
       if (context.isClient && sessionStorage) {
-        booksData = JSON.parse(sessionStorage.getItem('booksData'))
-        articlesData = JSON.parse(sessionStorage.getItem('articlesData'))
-        aboutsData = JSON.parse(sessionStorage.getItem('aboutsData'))
+        booksData = sessionStorage.getItem('booksData')
+        articlesData = sessionStorage.getItem('articlesData')
+        aboutsData = sessionStorage.getItem('aboutsData')
       }
       // リソース取得 (sessionStorage or Ajax)
       const queue = [
-        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/books.json`).then(res => res.body),
-        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.body),
-        aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.body)
+        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/books.json`).then(res => res.text),
+        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.text),
+        aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.text)
       ]
       return Promise.all(queue).then(results => {
         // TODO 別ファイルにするのは通信回数の無駄なので１ファイルにしたほうがいい
         // sessionStorage 保存
         if (context.isClient && sessionStorage) {
-          if (!booksData) sessionStorage.setItem('booksData', JSON.stringify(results[0]))
-          if (!articlesData) sessionStorage.setItem('articlesData', JSON.stringify(results[1]))
-          if (!aboutsData) sessionStorage.setItem('aboutsData', JSON.stringify(results[2]))
+          if (!booksData) sessionStorage.setItem('booksData', results[0])
+          if (!articlesData) sessionStorage.setItem('articlesData', results[1])
+          if (!aboutsData) sessionStorage.setItem('aboutsData', results[2])
         }
         return {
-          booksData: results[0],
-          articlesData: results[1],
-          staffData: results[2][0], // TODO わけがわからんので直すべき。ってか１ファイルにする。
-          contributorData: results[2][1],
+          booksData: JSON.parse(results[0]),
+          articlesData: JSON.parse(results[1]),
+          staffData: JSON.parse(results[2])[0], // TODO わけがわからんので直すべき。ってか１ファイルにすべき。
+          contributorData: JSON.parse(results[2])[1],
         }
       })
     }
