@@ -1,5 +1,5 @@
 <template>
-  <div class="header-parts">
+  <div class="header-parts" :class="{'is-visible': isVisible}">
     <div class="container">
       <nuxt-link :to="'/'">
         <h1 class="logo">
@@ -18,10 +18,33 @@
   </div>
 </template>
 
+<script>
+  import throttle from 'lodash.throttle'
+  export default {
+    data() {
+      return {
+        isVisible: false,
+        currentPosition: 0
+      }
+    },
+    mounted() {
+      if (window) {
+        window.addEventListener('scroll', throttle(() => {
+          this.isVisible = 500 > window.pageYOffset || window.pageYOffset < this.currentPosition
+          this.currentPosition = window.pageYOffset
+        }, 100))
+      }
+    },
+  }
+</script>
+
 <style lang="scss">
   .header-parts {
-    position: relative;
-    top: 0;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    transition-duration: .5s;
+    top: -100px;
     left: 0;
     right: 0;
     height: 80px;
@@ -30,6 +53,9 @@
     background-image: url("~assets/images/cover_welcome.jpg");
     color: #ffffff;
     overflow: hidden;
+    &.is-visible {
+      top: 0;
+    }
     .logo {
       height: 50px;
       padding: 5px;

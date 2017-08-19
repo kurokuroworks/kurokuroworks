@@ -1,7 +1,7 @@
 <template>
   <div>
     <header-parts></header-parts>
-    <ArticleSection :data="content" />
+    <ArticleSection :content="content" :meta="meta" />
     <footer-parts></footer-parts>
   </div>
 </template>
@@ -34,22 +34,35 @@
       })
     },
     asyncData(context) {
-      let article
+      let articlesData, article
       if (context.isClient && sessionStorage) {
+        articlesData = sessionStorage.getItem(`articlesData`)
         article = sessionStorage.getItem(`articles/${context.params.id}`)
       }
-      return Promise.resolve().then(() => {
-        return article ? article : request.get(`${context.env.staticBaseUrl}/www/articles/${context.params.id}.md`).then(res => res.text)
-      }).then((res) => {
+      const queue = [
+        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.body),
+        article ? article : request.get(`${context.env.staticBaseUrl}/www/articles/${context.params.id}/${context.params.id}.md`).then(res => res.text)
+      ]
+      return Promise.all(queue).then(results => {
         if (context.isClient && sessionStorage) {
-          if (!article) sessionStorage.setItem(`articles/${context.params.id}`, res)
+          if (!articlesData) sessionStorage.setItem('articlesData', JSON.stringify(results[0]))
+          if (!article) sessionStorage.setItem(`articles/${context.params.id}`, results[1])
         }
-        return { content: marked(res) }
+        if (typeof results[0] === 'string') {
+          results[0] = JSON.parse(results[0])
+        }
+        return {
+          meta: results[0].filter(item => {
+            return item.id === context.params.id
+          })[0],
+          content: marked(results[1])
+        }
       })
     },
     data() {
       return {
-        //
+        content: null,
+        meta: null
       }
     }
   }

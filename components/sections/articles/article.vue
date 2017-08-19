@@ -1,21 +1,66 @@
 <template>
   <section class="article-section">
+    <div class="cover">
+      <img :src="meta.thumbnail">
+    </div>
     <div class="container">
-      <div class="content" v-html="data"></div>
+      <div class="meta">
+        <h1 class="meta-title">{{meta.title}}</h1>
+        <p class="meta-description">{{meta.meta}}</p>
+      </div>
+      <div class="content" v-html="content"></div>
     </div>
   </section>
 </template>
 
 <script>
   export default {
-    props: ['data']
+    props: ['content','meta']
   }
 </script>
 
 <style lang="scss">
+  .ads {
+    width: 300px;
+    height: 250px;
+    background-color: #333234;
+    margin: 0 10px 10px;
+  }
   .article-section {
+    padding-top: 0;
+    .cover {
+      position: relative;
+      z-index: 0;
+      left: 0;
+      right: 0;
+      margin-bottom: -150px;
+      img {
+        width: 100%;
+      }
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      background-color: #ffffff;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+    .meta {
+      text-align: center;
+      padding: 100px 0 30px;
+      .meta-title {
+        font-size: 40px;
+        color: #444444;
+      }
+      .meta-description {
+        font-size: 22px;
+        padding: 20px;
+      }
+    }
     .content {
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
       padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
       a {
         color: #4183C4; }
       a.absent {
@@ -59,15 +104,12 @@
         font-size: inherit; }
 
       h1 {
-        font-size: 40px;
-        margin: 50px;
-        color: #444444;
-        text-align: center;
+        display: none;
       }
 
       h2 {
         margin-top: 50px;
-        font-size: 30px;
+        font-size: 26px;
         color: #444444;
       }
 
@@ -85,7 +127,10 @@
         font-size: 14px; }
 
       p, blockquote, ul, ol, dl, li, table, pre {
-        margin: 15px 0; }
+        margin: 15px 0;
+        font-size: 18px;
+        line-height: 23px;
+      }
 
       hr {
         background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
@@ -183,7 +228,9 @@
         margin-bottom: 0; }
 
       img {
-        max-width: 100%; }
+        max-width: 100%;
+        margin: 10px 0 20px;
+      }
 
       span.frame {
         display: block;
@@ -252,14 +299,18 @@
         white-space: nowrap;
         border: 1px solid #eaeaea;
         background-color: #f8f8f8;
-        border-radius: 3px; }
+        border-radius: 3px;
+        font-size: 16px;
+        font-family: "Courier New", sans-serif;
+      }
 
       pre code {
         margin: 0;
         padding: 0;
         white-space: pre;
         border: none;
-        background: transparent; }
+        background: transparent;
+      }
 
       .highlight pre {
         background-color: #f8f8f8;
