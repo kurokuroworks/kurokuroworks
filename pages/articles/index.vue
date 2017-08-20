@@ -134,6 +134,9 @@
         .text {
           background-color: #ffffff;
         }
+        @media screen and (min-width: 735px) { // 720 + 15
+          width: 360px;
+        }
       }
     }
   }
