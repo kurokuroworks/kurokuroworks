@@ -62,7 +62,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .articles {
     .item-container {
       display: flex;

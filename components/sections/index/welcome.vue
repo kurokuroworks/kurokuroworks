@@ -22,7 +22,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .welcome + section {
     padding-top: 0;
   }

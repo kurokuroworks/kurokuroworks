@@ -63,7 +63,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .abouts {
     background-image: url("~assets/images/cover_abouts.jpg");
     background-size: cover;

@@ -1,42 +1,58 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "2.nuxt.bundle.28049e4ee3c17d738072.js",
+    "2.nuxt.bundle.a1f2996b2a0f1bece1ce.js",
     "img/logo_white.8eff58f.png",
     "img/chloe.67ad6e3.png",
     "img/cover_abouts.b4d199f.jpg",
     "img/cover_apps.df25f17.jpg",
-    "0.nuxt.bundle.9db0e4b3ab2b29839d09.js",
+    "0.nuxt.bundle.f064b8a650b692df93ca.js",
     "1.nuxt.bundle.f19ccc9b87e93923acbb.js",
     "img/cover_welcome.b4d199f.jpg",
     "3.nuxt.bundle.32edf99d1e9f20b333ce.js",
-    "4.nuxt.bundle.ffbb62eb959cb44bb554.js",
+    "4.nuxt.bundle.5bbe92805fb9e39e67d4.js",
     "vendor.bundle.608300451b804f22b5d3.js",
     "nuxt.bundle.9310e70e13f85d036cca.js",
-    "manifest.ca7f3b6acd6be1f38bec.js",
+    "manifest.dc8115bafa6419cedf75.js",
     "index.html"
   ],
   "initial": [
-    "manifest.ca7f3b6acd6be1f38bec.js",
+    "manifest.dc8115bafa6419cedf75.js",
     "vendor.bundle.608300451b804f22b5d3.js",
     "nuxt.bundle.9310e70e13f85d036cca.js"
   ],
   "async": [
-    "2.nuxt.bundle.28049e4ee3c17d738072.js",
-    "0.nuxt.bundle.9db0e4b3ab2b29839d09.js",
+    "2.nuxt.bundle.a1f2996b2a0f1bece1ce.js",
+    "0.nuxt.bundle.f064b8a650b692df93ca.js",
     "1.nuxt.bundle.f19ccc9b87e93923acbb.js",
     "3.nuxt.bundle.32edf99d1e9f20b333ce.js",
-    "4.nuxt.bundle.ffbb62eb959cb44bb554.js"
+    "4.nuxt.bundle.5bbe92805fb9e39e67d4.js"
   ],
   "modules": {
     "17865995": [
       10
+    ],
+    "18996161": [
+      5,
+      1,
+      7,
+      2,
+      3,
+      4
     ],
     "35542026": [
       10
     ],
     "49191977": [
       10
+    ],
+    "65758498": [
+      5,
+      1,
+      7,
+      2,
+      3,
+      4
     ],
     "71151564": [
       10
@@ -583,7 +599,7 @@
       1,
       7
     ],
-    "e879bdc8": [
+    "349eed63": [
       5,
       1,
       7,
@@ -591,15 +607,7 @@
       3,
       4
     ],
-    "215cfffc": [
-      5,
-      1,
-      7,
-      2,
-      3,
-      4
-    ],
-    "2ef29490": [
+    "4d9b7247": [
       5,
       1,
       7,
@@ -618,7 +626,7 @@
     "694e8571": [
       9
     ],
-    "ce9543ae": [
+    "01a62ed4": [
       5,
       1,
       7,
@@ -634,7 +642,7 @@
       3,
       4
     ],
-    "0571ea3b": [
+    "0d23ded8": [
       5,
       1,
       7,
@@ -727,7 +735,7 @@
       1,
       7
     ],
-    "e064662c": [
+    "1b9ca1c9": [
       5,
       1,
       7,
@@ -735,7 +743,7 @@
       3,
       4
     ],
-    "5f314d50": [
+    "16f8ef2d": [
       5,
       1,
       7,
@@ -743,7 +751,7 @@
       3,
       4
     ],
-    "5342d144": [
+    "359a6872": [
       5,
       1,
       7,
@@ -762,7 +770,7 @@
     "46e91bde": [
       9
     ],
-    "4a68f79b": [
+    "c0218f20": [
       5,
       1,
       7,
@@ -778,7 +786,7 @@
       3,
       4
     ],
-    "17f9f12d": [
+    "dcba9424": [
       5,
       1,
       7,
@@ -804,7 +812,7 @@
       1,
       7
     ],
-    "5d2dc2f6": [
+    "8a01c24c": [
       5,
       1,
       7,
@@ -812,15 +820,7 @@
       3,
       4
     ],
-    "235899eb": [
-      5,
-      1,
-      7,
-      2,
-      3,
-      4
-    ],
-    "7d9ad839": [
+    "3ec4f73e": [
       5,
       1,
       7,
@@ -839,7 +839,7 @@
     "05ddf1e8": [
       9
     ],
-    "1f158fa0": [
+    "4dd52c3f": [
       5,
       1,
       7,
@@ -855,7 +855,7 @@
       3,
       4
     ],
-    "524e0d72": [
+    "2d752a7d": [
       5,
       1,
       7,

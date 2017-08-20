@@ -15,7 +15,7 @@
             </ul>
           </div>
           <advertisement-parts></advertisement-parts>
-          <div class="content" v-html="content"></div>
+          <div class="markdown" v-html="content"></div>
           <advertisement-parts></advertisement-parts>
         </div>
       </div>
@@ -144,7 +144,7 @@
         }
       }
     }
-    .content {
+    .markdown {
       padding: 20px;
       max-width: 800px;
       margin: 0 auto;

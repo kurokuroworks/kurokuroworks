@@ -16,7 +16,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .apps {
     text-align: center;
     background-image: url("~assets/images/cover_apps.jpg");

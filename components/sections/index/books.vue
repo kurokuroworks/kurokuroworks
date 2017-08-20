@@ -37,7 +37,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .books {
     .item-container {
       display: flex;
