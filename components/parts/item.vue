@@ -6,8 +6,10 @@
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
           <div class="text">
             <h4 class="title">{{title}}</h4>
-            <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
+            <ul class="meta">
+              <li v-for="item in splittedMeta">{{item}}</li>
+            </ul>
           </div>
         </nuxt-link>
       </template>
@@ -16,8 +18,10 @@
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
           <div class="text">
             <h4 class="title">{{title}}</h4>
-            <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
+            <ul class="meta">
+              <li v-for="item in splittedMeta">{{item}}</li>
+            </ul>
           </div>
         </a>
       </template>
@@ -26,8 +30,10 @@
           <img v-if="thumbnail" class="thumbnail" :src="thumbnail">
           <div class="text">
             <h4 class="title">{{title}}</h4>
-            <p class="meta">{{meta}}</p>
             <p class="description">{{description}}</p>
+            <ul class="meta">
+              <li v-for="item in splittedMeta">{{item}}</li>
+            </ul>
           </div>
         </div>
       </template>
@@ -37,7 +43,12 @@
 
 <script>
   export default {
-    props: ['type', 'id', 'href', 'thumbnail', 'title', 'meta', 'description']
+    props: ['type', 'id', 'href', 'thumbnail', 'title', 'meta', 'description'],
+    computed: {
+      splittedMeta() {
+        return this.meta.split(',')
+      }
+    }
   }
 </script>
 
@@ -51,9 +62,25 @@
       .title {
         font-weight: bold;
         font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 3px;
+      }
+      .meta {
+        overflow: hidden;
+        li {
+          border: 1px solid #4183C4;
+          border-radius: 1px;
+          padding: 0 5px;
+          margin: 1px 4px 1px 0;
+          float: left;
+          color: #4183C4;
+          font-size: 14px;
+        }
       }
       .meta, .description {
-        margin-top: 4px;
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 3px;
       }
       box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     }

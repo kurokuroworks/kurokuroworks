@@ -30,7 +30,7 @@
     mounted() {
       if (window) {
         window.addEventListener('scroll', throttle(() => {
-          this.isVisible = 500 > window.pageYOffset || window.pageYOffset < this.currentPosition
+          this.isVisible = 300 > window.pageYOffset || window.pageYOffset < this.currentPosition
           this.currentPosition = window.pageYOffset
         }, 100))
       }
@@ -56,18 +56,22 @@
     background-image: url("~assets/images/cover_welcome.jpg");
     color: #ffffff;
     overflow: hidden;
+    text-align: center;
     &.is-visible {
       top: 0;
     }
+    a {
+      display: inline-block;
+    }
     .logo {
       height: 50px;
-      padding: 5px;
-      text-align: center;
+      padding: 7px;
       img {
         height: 100%;
       }
     }
     nav {
+      background-color: rgba(0,0,0,0.3);
       ul {
         display: flex;
         justify-content: center;
@@ -78,11 +82,13 @@
           text-align: center;
           width: 110px;
           height: 30px;
-          line-height: 25px;
+          font-size: 14px;
+          line-height: 30px;
         }
       }
     }
     @media screen and (min-width: 735px) { // 720 + 15
+      text-align: inherit;
       .logo {
         float: left;
         height: 80px;
@@ -93,6 +99,7 @@
       }
       nav {
         float: right;
+        background: none;
         ul {
           display: flex;
           li {
@@ -100,7 +107,6 @@
               display: block;
               width: 100%;
               font-size: 2.2rem;
-              margin-bottom: 3px;
             }
             text-align: center;
             width: 110px;
