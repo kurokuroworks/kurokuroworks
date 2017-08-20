@@ -14,7 +14,7 @@
           <li><nuxt-link :to="'/'">
             <p><i class="fa fa-magic" aria-hidden="true"></i>アプリ</p>
           </nuxt-link></li>
-          <li><nuxt-link :to="'/'">
+          <li><nuxt-link :to="'/books'">
             <p><i class="fa fa-paper-plane" aria-hidden="true"></i>同人誌</p>
           </nuxt-link></li>
           <li><nuxt-link :to="'/'">

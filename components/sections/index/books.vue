@@ -18,7 +18,7 @@
         </template>
       </ul>
       <button-parts
-        :href="'#'"
+        :href="'/books'"
         :message="'もっとみる'"
       ></button-parts>
     </div>

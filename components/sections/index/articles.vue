@@ -87,7 +87,7 @@
       .side-container {
         .sticker {
           position: absolute;
-          right: 0;
+          right: 10px;
           bottom: 0;
           font-size: 12px;
         }

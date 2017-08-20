@@ -1,10 +1,10 @@
 <template>
   <div class="ads-container">
     <div class="ads primary">
-      <p>big rectangle ads 336x280</p>
+      <img src="~assets/images/ads.jpg">
     </div>
     <div class="ads secondary">
-      <p>big rectangle ads 336x280</p>
+      <img src="~assets/images/ads.jpg">
     </div>
   </div>
 </template>
@@ -18,8 +18,6 @@
     .ads {
       width: 336px;
       height: 280px;
-      background-color: #333333;
-      color: #ff0000;
       margin: 0 5px 10px;
       &.secondary {
         display: none;

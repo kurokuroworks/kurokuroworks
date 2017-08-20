@@ -1,35 +1,25 @@
 <template>
   <div>
     <header-parts></header-parts>
-    <section class="articles">
-      <div class="articles-header">
+    <section class="books">
+      <div class="books-header">
         <div class="container">
           <div class="section-title">
-            <h2>記事・お知らせ</h2>
-            <p>Articles</p>
+            <h2>技術誌・同人誌</h2>
+            <p>Books</p>
           </div>
-          <nav class="articles-nav">
-            <ul>
-              <li class="selected">全て</li>
-              <li>かわいい</li>
-              <li>プログラミング</li>
-              <li>おでかけ</li>
-              <li>その他</li>
-            </ul>
-          </nav>
         </div>
       </div>
       <div class="container">
         <ul class="item-container">
-          <template v-for="item in articles">
+          <template v-for="item in books">
             <item-parts
-              :type="'articles'"
+              :type="'books'"
               :id="item.id"
               :href="item.href"
               :thumbnail="item.thumbnail"
               :title="item.title"
               :meta="item.meta"
-              :description="item.description"
             ></item-parts>
           </template>
         </ul>
@@ -54,35 +44,35 @@
       FooterParts
     },
     asyncData(context) {
-      let articlesData
+      let booksData
       if (context.isClient && sessionStorage) {
-        articlesData = sessionStorage.getItem('articlesData')
+        booksData = sessionStorage.getItem('booksData')
       }
       const queue = [
-        articlesData ? articlesData : request.get(`${context.env.staticBaseUrl}/www/articles.json`).then(res => res.text)
+        booksData ? booksData : request.get(`${context.env.staticBaseUrl}/www/books.json`).then(res => res.text)
       ]
       return Promise.all(queue).then(results => {
         if (context.isClient && sessionStorage) {
-          if (!articlesData) sessionStorage.setItem('articlesData', results[0])
+          if (!booksData) sessionStorage.setItem('booksData', results[0])
         }
         return {
-          articles: JSON.parse(results[0])
+          books: JSON.parse(results[0])
         }
       })
     },
     data() {
       return {
-        articles: null
+        books: null
       }
     }
   }
 </script>
 
 <style lang="scss">
-  .articles {
+  .books {
     padding-top: 0;
     padding-bottom: 50px;
-    .articles-header {
+    .books-header {
       text-align: center;
       background-color: #444444;
       background-size: cover;
@@ -101,38 +91,22 @@
           line-height: 30px;
         }
       }
-      .articles-nav {
-        margin: 20px 10px;
-        color: #ffffff;
-        ul {
-          display: flex;
-          justify-content: center;
-          li {
-            font-size: 20px;
-            width: 180px;
-            text-align: center;
-            margin: 5px;
-            padding: 5px 10px;
-            border-bottom: 3px solid transparent;
-            &.selected {
-              border-bottom: 3px solid #ffffff;
-            }
-          }
-        }
-      }
     }
     .item-container {
       display: flex;
       flex-wrap: wrap;
       margin-top: -10px;
       .item-parts {
-        width: 100%;
+        width: 50%;
         padding: 10px;
-        .thumbnail {
-          width: 100%;
-        }
         .text {
           background-color: #ffffff;
+        }
+        @media (min-width: 735px) { // 720 + 15
+          width: 180px;
+        }
+        @media (min-width:1095px) { // 1080 + 15
+          width: 216px;
         }
       }
     }

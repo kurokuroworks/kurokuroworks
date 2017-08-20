@@ -1,5 +1,5 @@
 <template>
-  <section class="abouts about">
+  <section class="abouts">
     <div class="container">
       <div class="section-title">
         <h2>サークルについて</h2>
@@ -63,7 +63,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .abouts {
     background-image: url("~assets/images/cover_abouts.jpg");
     background-size: cover;
@@ -86,9 +86,6 @@
       }
       .paragraph {
         padding: 10px;
-      }
-      .about {
-
       }
       .staff {
         .item-container {

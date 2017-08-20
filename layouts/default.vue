@@ -35,6 +35,7 @@
     url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Regular.woff) format('woff');
   }
   body {
+    overflow-x: hidden;
     .page-enter-active, .page-leave-active {
       transition-duration: .3s;
     }
