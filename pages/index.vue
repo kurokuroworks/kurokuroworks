@@ -47,7 +47,6 @@
         aboutsData ? aboutsData : request.get(`${context.env.staticBaseUrl}/www/abouts.json`).then(res => res.text)
       ]
       return Promise.all(queue).then(results => {
-        // TODO 別ファイルにするのは通信回数の無駄なので１ファイルにしたほうがいい
         // sessionStorage 保存
         if (context.isClient && sessionStorage) {
           if (!booksData) sessionStorage.setItem('booksData', results[0])
@@ -57,7 +56,7 @@
         return {
           booksData: JSON.parse(results[0]),
           articlesData: JSON.parse(results[1]),
-          staffData: JSON.parse(results[2])[0], // TODO わけがわからんので直すべき。ってか１ファイルにすべき。
+          staffData: JSON.parse(results[2])[0], // TODO わけがわからんので直したほうがいいかも。
           contributorData: JSON.parse(results[2])[1],
         }
       })

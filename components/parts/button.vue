@@ -1,8 +1,8 @@
 <template>
   <div class="button-parts">
-    <a :href="href">
+    <nuxt-link :to="href">
       <p>{{message}}</p>
-    </a>
+    </nuxt-link>
   </div>
 </template>
 

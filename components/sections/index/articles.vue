@@ -32,7 +32,7 @@
         </template>
       </ul>
       <button-parts
-        :href="'#'"
+        :href="'/articles'"
         :message="'もっとみる'"
       ></button-parts>
     </div>

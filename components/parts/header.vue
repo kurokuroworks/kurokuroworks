@@ -8,10 +8,18 @@
       </nuxt-link>
       <nav>
         <ul>
-          <li><i class="fa fa-rss" aria-hidden="true"></i>記事</li>
-          <li><i class="fa fa-magic" aria-hidden="true"></i>アプリ</li>
-          <li><i class="fa fa-paper-plane" aria-hidden="true"></i>同人誌</li>
-          <li><i class="fa fa-hashtag" aria-hidden="true"></i>サークル</li>
+          <li><nuxt-link :to="'/articles'">
+            <p><i class="fa fa-rss" aria-hidden="true"></i>記事</p>
+          </nuxt-link></li>
+          <li><nuxt-link :to="'/'">
+            <p><i class="fa fa-magic" aria-hidden="true"></i>アプリ</p>
+          </nuxt-link></li>
+          <li><nuxt-link :to="'/'">
+            <p><i class="fa fa-paper-plane" aria-hidden="true"></i>同人誌</p>
+          </nuxt-link></li>
+          <li><nuxt-link :to="'/'">
+            <p><i class="fa fa-hashtag" aria-hidden="true"></i>サークル</p>
+          </nuxt-link></li>
         </ul>
       </nav>
     </div>
@@ -76,14 +84,19 @@
         display: flex;
         justify-content: center;
         li {
-          i {
-            display: none;
+          a {
+            color: #ffffff;
           }
-          text-align: center;
-          width: 110px;
-          height: 30px;
-          font-size: 14px;
-          line-height: 30px;
+          p {
+            i {
+              display: none;
+            }
+            text-align: center;
+            width: 110px;
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
+          }
         }
       }
     }
@@ -103,17 +116,19 @@
         ul {
           display: flex;
           li {
-            i {
-              display: block;
-              width: 100%;
-              font-size: 2.2rem;
-            }
-            text-align: center;
-            width: 110px;
-            height: 80px;
-            padding: 18px;
-            &:hover {
-              border-bottom: 4px solid #ffffff;
+            p {
+              i {
+                display: block;
+                width: 100%;
+                font-size: 2.2rem;
+              }
+              text-align: center;
+              width: 110px;
+              height: 80px;
+              padding: 18px;
+              &:hover {
+                border-bottom: 4px solid #ffffff;
+              }
             }
           }
         }
