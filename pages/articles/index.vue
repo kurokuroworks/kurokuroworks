@@ -7,20 +7,16 @@
           <h2>記事・お知らせ</h2>
           <p>Articles</p>
         </div>
+        <nav class="articles-nav">
+          <ul>
+            <li class="selected">全て</li>
+            <li>かわいい</li>
+            <li>プログラミング</li>
+            <li>旅行</li>
+            <li>その他</li>
+          </ul>
+        </nav>
         <ul class="item-container">
-          <item-parts
-            :type="'articles'"
-            :id="pickup.id"
-            :href="pickup.href"
-            :thumbnail="pickup.thumbnail"
-            :title="pickup.title"
-            :meta="pickup.meta"
-            :description="pickup.description"
-          ></item-parts>
-          <li class="side-container">
-            <p class="sticker">スポンサーリンク</p>
-            <advertisement-parts></advertisement-parts>
-          </li>
           <template v-for="item in articles">
             <item-parts
               :type="'articles'"
@@ -35,12 +31,12 @@
         </ul>
       </div>
     </section>
+    <advertisement-parts></advertisement-parts>
     <footer-parts></footer-parts>
   </div>
 </template>
 
 <script>
-  import slice from 'lodash.slice'
   import request from 'superagent'
   import ItemParts from '~components/parts/item.vue'
   import HeaderParts from '~components/parts/header.vue'
@@ -52,14 +48,6 @@
       ItemParts,
       HeaderParts,
       FooterParts
-    },
-    computed: {
-      pickup() {
-        return this.articlesData[0]
-      },
-      articles() {
-        return slice(this.articlesData, 1, 7)
-      }
     },
     asyncData(context) {
       let articlesData
@@ -74,13 +62,13 @@
           if (!articlesData) sessionStorage.setItem('articlesData', results[0])
         }
         return {
-          articlesData: JSON.parse(results[0])
+          articles: JSON.parse(results[0])
         }
       })
     },
     data() {
       return {
-        articlesData: null
+        articles: null
       }
     }
   }
@@ -88,6 +76,40 @@
 
 <style lang="scss">
   .articles {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .section-title {
+      text-align: center;
+      margin: 30px 10px;
+      h2 {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    .articles-nav {
+      margin: 20px 10px;
+      background-color: #444444;
+      color: #ffffff;
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          font-size: 20px;
+          width: 180px;
+          text-align: center;
+          margin: 5px;
+          padding: 5px 10px;
+          border-bottom: 3px solid transparent;
+          &.selected {
+            border-bottom: 3px solid #ffffff;
+          }
+        }
+      }
+    }
     .item-container {
       display: flex;
       flex-wrap: wrap;
@@ -103,9 +125,6 @@
         }
         @media screen and (min-width: 735px) { // 720 + 15
           width: 360px;
-          &:first-child {
-            width: 720px;
-          }
         }
       }
       .side-container {
