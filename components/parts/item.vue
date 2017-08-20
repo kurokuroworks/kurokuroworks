@@ -7,8 +7,8 @@
           <div class="text">
             <h4 class="title">{{title}}</h4>
             <p class="description">{{description}}</p>
-            <ul class="meta">
-              <li v-for="item in splittedMeta">{{item}}</li>
+            <ul class="meta-tag">
+              <li v-for="item in splittedMetaTag">{{item}}</li>
             </ul>
           </div>
         </nuxt-link>
@@ -19,8 +19,8 @@
           <div class="text">
             <h4 class="title">{{title}}</h4>
             <p class="description">{{description}}</p>
-            <ul class="meta">
-              <li v-for="item in splittedMeta">{{item}}</li>
+            <ul class="meta-tag">
+              <li v-for="item in splittedMetaTag">{{item}}</li>
             </ul>
           </div>
         </a>
@@ -31,8 +31,8 @@
           <div class="text">
             <h4 class="title">{{title}}</h4>
             <p class="description">{{description}}</p>
-            <ul class="meta">
-              <li v-for="item in splittedMeta">{{item}}</li>
+            <ul class="meta-tag">
+              <li v-for="item in splittedMetaTag">{{item}}</li>
             </ul>
           </div>
         </div>
@@ -45,7 +45,7 @@
   export default {
     props: ['type', 'id', 'href', 'thumbnail', 'title', 'meta', 'description'],
     computed: {
-      splittedMeta() {
+      splittedMetaTag() {
         return this.meta.split(',')
       }
     }
@@ -65,14 +65,14 @@
         line-height: 22px;
         margin-bottom: 3px;
       }
-      .meta {
-        overflow: hidden;
+      .meta-tag {
+        display: flex;
+        flex-wrap: wrap;
         li {
           border: 1px solid #4183C4;
           border-radius: 1px;
           padding: 0 5px;
           margin: 1px 4px 1px 0;
-          float: left;
           color: #4183C4;
           font-size: 14px;
         }

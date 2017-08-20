@@ -8,17 +8,30 @@
         <div class="meta">
           <h1 class="meta-title">{{meta.title}}</h1>
           <p class="meta-description">{{meta.description}}</p>
-          <p class="meta-description">{{meta.meta}}</p>
+          <ul class="meta-tag">
+            <li v-for="item in splittedMetaTag">{{item}}</li>
+          </ul>
         </div>
+        <advertisement-parts></advertisement-parts>
         <div class="content" v-html="content"></div>
+        <advertisement-parts></advertisement-parts>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+  import AdvertisementParts from '~components/parts/advertisement.vue'
   export default {
-    props: ['content','meta']
+    components: {
+      AdvertisementParts
+    },
+    props: ['content','meta'],
+    computed: {
+      splittedMetaTag() {
+        return this.meta.meta.split(',')
+      }
+    }
   }
 </script>
 
@@ -43,14 +56,15 @@
     }
     .paper {
       position: relative;
-      margin: 20px;
+      padding-bottom: 20px;
+      margin: 10px;
       z-index: 1;
       background-color: #ffffff;
       box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     }
     .meta {
       text-align: center;
-      padding: 100px 0 30px;
+      padding: 80px 0 40px;
       .meta-title {
         font-size: 30px;
         color: #444444;
@@ -58,6 +72,18 @@
       .meta-description {
         font-size: 22px;
         padding: 10px;
+      }
+      .meta-tag {
+        display: flex;
+        justify-content: center;
+        li {
+          border: 1px solid #4183C4;
+          border-radius: 1px;
+          padding: 0 5px;
+          margin: 1px 4px 1px 0;
+          color: #4183C4;
+          font-size: 14px;
+        }
       }
       @media screen and (min-width: 735px) { // 720 + 15
         .meta-title {

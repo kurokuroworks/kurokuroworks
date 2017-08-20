@@ -16,12 +16,8 @@
           :description="pickup.description"
         ></item-parts>
         <li class="side-container">
-          <div class="ads">
-            <p>middle rectangle ads 300x250</p>
-          </div>
-          <div class="ads">
-            <p>middle rectangle ads 300x250</p>
-          </div>
+          <p class="sticker">スポンサーリンク</p>
+          <advertisement-parts></advertisement-parts>
         </li>
         <template v-for="item in articles">
           <item-parts
@@ -47,11 +43,13 @@
   import slice from 'lodash.slice'
   import ItemParts from '~components/parts/item.vue'
   import ButtonParts from '~components/parts/button.vue'
+  import AdvertisementParts from '~components/parts/advertisement.vue'
   export default {
     props: ['data'],
     components: {
       ItemParts,
-      ButtonParts
+      ButtonParts,
+      AdvertisementParts
     },
     computed: {
       pickup() {
@@ -87,17 +85,20 @@
         }
       }
       .side-container {
+        .sticker {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          font-size: 12px;
+        }
+        position: relative;
+        background-color: #ffffff;
         width: 100%;
-        padding: 10px 0 0;
+        margin: 10px 0;
+        padding-bottom: 10px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        .ads {
-          width: 300px;
-          height: 250px;
-          background-color: #333234;
-          margin: 0 10px 10px;
-        }
         @media (min-width:1095px) {
           width: 360px;
         }
