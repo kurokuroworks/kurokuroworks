@@ -1,5 +1,5 @@
 <template>
-  <section class="abouts">
+  <section class="index-abouts-section">
     <div class="container">
       <div class="section-title">
         <h2>サークルについて</h2>
@@ -15,39 +15,10 @@
             <p>かわいいは正義なので、かわいいと思うものに技術を注ぎ込みたいと思っています。</p>
           </div>
         </div>
-      </div>
-      <div class="block">
-        <div class="separator staff">
-          <h3 class="subtitle">サークルのなかのひと</h3>
-          <ul class="item-container">
-            <template v-for="item in staff">
-              <item-parts
-                :href="item.href"
-                :thumbnail="item.thumbnail"
-                :title="item.title"
-                :meta="item.meta"
-                :description="item.description"
-              ></item-parts>
-            </template>
-          </ul>
-        </div>
-        <div class="separator contributor">
-          <h3 class="subtitle">Special thanks!</h3>
-          <ul class="item-container">
-            <template v-for="item in contributor">
-              <item-parts
-                :href="item.href"
-                :thumbnail="item.thumbnail"
-                :title="item.title"
-                :meta="item.meta"
-              ></item-parts>
-            </template>
-          </ul>
-          <div class="paragraph">
-            <p>"くろくろわーくす"では、かわいいものに魂を吹き込むエンジニア、かわいい絵が描けるイラストレーターを募集しています。</p>
-            <p>同人活動に興味があり、一緒に作ってみたい方は @nanocloudx まで気兼ねなくご連絡をお待ちしております（ ＾ω＾）</p>
-          </div>
-        </div>
+        <button-parts
+          :href="'/abouts'"
+          :message="'もっとみる'"
+        ></button-parts>
       </div>
     </div>
   </section>
@@ -55,16 +26,18 @@
 
 <script>
   import ItemParts from '~components/parts/item.vue'
+  import ButtonParts from '~components/parts/button.vue'
   export default {
     props: ['staff', 'contributor'],
     components: {
-      ItemParts
+      ItemParts,
+      ButtonParts
     }
   }
 </script>
 
 <style lang="scss">
-  .abouts {
+  .index-abouts-section {
     background-image: url("~assets/images/cover_abouts.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -86,60 +59,6 @@
       }
       .paragraph {
         padding: 10px;
-      }
-      .staff {
-        .item-container {
-          display: flex;
-          flex-direction: column;
-          .item-parts {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            .text {
-              box-shadow: none;
-            }
-            img {
-              margin: 0 auto;
-            }
-          }
-          @media screen and (min-width: 735px) { // 720 + 15
-            .item-parts {
-              text-align: left;
-              img {
-                float: left;
-                margin-right: 10px;
-              }
-            }
-          }
-          @media (min-width:1095px) {
-            flex-direction: row;
-          }
-        }
-      }
-      .contributor {
-        .item-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          .item-parts {
-            width: 50%;
-            max-width: 135px;
-            padding: 10px;
-            margin-bottom: 10px;
-            .text {
-              box-shadow: none;
-            }
-            img {
-              max-height: 135px;
-              margin: 0 auto;
-            }
-          }
-          @media screen and (min-width: 735px) { // 720 + 15
-            .item-parts {
-              text-align: left;
-            }
-          }
-        }
       }
     }
   }

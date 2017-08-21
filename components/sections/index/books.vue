@@ -1,5 +1,5 @@
 <template>
-  <section class="books">
+  <section class="index-books-section">
     <div class="container">
       <div class="section-title">
         <h2>技術誌・同人誌</h2>
@@ -37,8 +37,8 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .books {
+<style lang="scss">
+  .index-books-section {
     .item-container {
       display: flex;
       flex-wrap: wrap;

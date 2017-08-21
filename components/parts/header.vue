@@ -11,13 +11,13 @@
           <li><nuxt-link :to="'/articles'">
             <p><i class="fa fa-rss" aria-hidden="true"></i>記事</p>
           </nuxt-link></li>
-          <li><nuxt-link :to="'/'">
-            <p><i class="fa fa-magic" aria-hidden="true"></i>アプリ</p>
-          </nuxt-link></li>
+          <!--<li><nuxt-link :to="'/'">-->
+            <!--<p><i class="fa fa-magic" aria-hidden="true"></i>アプリ</p>-->
+          <!--</nuxt-link></li>-->
           <li><nuxt-link :to="'/books'">
             <p><i class="fa fa-paper-plane" aria-hidden="true"></i>同人誌</p>
           </nuxt-link></li>
-          <li><nuxt-link :to="'/'">
+          <li><nuxt-link :to="'/abouts'">
             <p><i class="fa fa-hashtag" aria-hidden="true"></i>サークル</p>
           </nuxt-link></li>
         </ul>
@@ -38,7 +38,7 @@
     mounted() {
       if (window) {
         window.addEventListener('scroll', throttle(() => {
-          this.isVisible = 300 > window.pageYOffset || window.pageYOffset < this.currentPosition
+          this.isVisible = 250 > window.pageYOffset || window.pageYOffset < this.currentPosition
           this.currentPosition = window.pageYOffset
         }, 100))
       }

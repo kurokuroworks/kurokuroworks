@@ -1,7 +1,7 @@
 <template>
   <div>
     <header-parts></header-parts>
-    <section class="books">
+    <section class="books-page">
       <div class="books-header">
         <div class="container">
           <div class="section-title">
@@ -69,7 +69,7 @@
 </script>
 
 <style lang="scss">
-  .books {
+  .books-page {
     padding-top: 0;
     padding-bottom: 50px;
     .books-header {

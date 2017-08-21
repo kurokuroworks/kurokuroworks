@@ -1,5 +1,5 @@
 <template>
-  <section class="apps">
+  <section class="index-apps-section">
     <div class="container">
       <div class="section-title">
         <h2>公開中のアプリ</h2>
@@ -16,8 +16,8 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .apps {
+<style lang="scss">
+  .index-apps-section {
     text-align: center;
     background-image: url("~assets/images/cover_apps.jpg");
     background-size: cover;

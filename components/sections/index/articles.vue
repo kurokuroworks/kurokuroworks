@@ -1,5 +1,5 @@
 <template>
-  <section class="articles">
+  <section class="index-articles-section">
     <div class="container">
       <div class="section-title">
         <h2>記事・お知らせ</h2>
@@ -62,8 +62,8 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .articles {
+<style lang="scss">
+  .index-articles-section {
     .item-container {
       display: flex;
       flex-wrap: wrap;

@@ -1,5 +1,5 @@
 <template>
-  <section class="welcome">
+  <section class="index-welcome-section">
     <div class="main">
       <div class="container">
         <h1 class="logo">
@@ -22,11 +22,11 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .welcome + section {
+<style lang="scss">
+  .index-welcome-section + section {
     padding-top: 0;
   }
-  .welcome {
+  .index-welcome-section {
     overflow: hidden;
     padding-top: 0;
     padding-bottom: 0;
