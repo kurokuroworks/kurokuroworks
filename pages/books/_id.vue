@@ -39,7 +39,7 @@
         article = sessionStorage.getItem(`books/${context.params.id}`)
       }
       return Promise.resolve().then(() => {
-        return article ? article : request.get(`${context.env.staticBaseUrl}/www/books/${context.params.id}.md`).then(res => res.text)
+        return article ? article : request.get(`${context.env.staticBaseUrl}/www/books/${context.params.id}/${context.params.id}.md`).then(res => res.text)
       }).then((res) => {
         if (context.isClient && sessionStorage) {
           if (!article) sessionStorage.setItem(`books/${context.params.id}`, res)
