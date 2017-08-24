@@ -10,18 +10,21 @@
           </div>
           <nav class="articles-nav">
             <ul>
-              <li class="selected">全て</li>
-              <li>かわいい</li>
-              <li>プログラミング</li>
-              <li>おでかけ</li>
-              <li>その他</li>
+              <li @click="onSelectFilter('all')" :class="{'selected': this.selectedFilter === 'all'}">全て</li>
+              <li @click="onSelectFilter('kawaii')" :class="{'selected': this.selectedFilter === 'kawaii'}">かわいい</li>
+              <li @click="onSelectFilter('programming')" :class="{'selected': this.selectedFilter === 'programming'}">プログラミング</li>
+              <li @click="onSelectFilter('travel')" :class="{'selected': this.selectedFilter === 'travel'}">おでかけ</li>
+              <li @click="onSelectFilter('other')" :class="{'selected': this.selectedFilter === 'other'}">その他</li>
             </ul>
           </nav>
         </div>
       </div>
       <div class="container">
+        <template v-if="!filteredArticles.length">
+          <p class="nothing-message">まだないみたいですん(´・ω・`)</p>
+        </template>
         <ul class="item-container">
-          <template v-for="item in articles">
+          <template v-for="item in filteredArticles">
             <item-parts
               :type="'articles'"
               :id="item.id"
@@ -53,6 +56,44 @@
       HeaderParts,
       FooterParts
     },
+    computed: {
+      filteredArticles() {
+        if (!this.articles) {
+          return []
+        }
+        let targetTag = ''
+        switch (this.selectedFilter) {
+          case 'all':
+            return this.articles;
+          case 'kawaii':
+            targetTag = 'かわいい'
+            break
+          case 'programming':
+            targetTag = 'プログラミング'
+            break
+          case 'travel':
+            targetTag = 'おでかけ'
+            break
+          case 'other':
+            targetTag = 'その他'
+            break
+        }
+        return this.articles.filter((item) => {
+          return item.meta.split(/\s*,\s*/).indexOf(targetTag) !== -1
+        })
+      }
+    },
+    methods: {
+      onSelectFilter(target) {
+        this.selectedFilter = target;
+      }
+    },
+    data() {
+      return {
+        articles: [],
+        selectedFilter: 'all'
+      }
+    },
     asyncData(context) {
       let articlesData
       if (context.isClient && sessionStorage) {
@@ -69,11 +110,6 @@
           articles: JSON.parse(results[0])
         }
       })
-    },
-    data() {
-      return {
-        articles: null
-      }
     }
   }
 </script>
@@ -108,6 +144,7 @@
           display: flex;
           justify-content: center;
           li {
+            cursor: pointer;
             font-size: 20px;
             width: 180px;
             text-align: center;
@@ -116,10 +153,16 @@
             border-bottom: 3px solid transparent;
             &.selected {
               border-bottom: 3px solid #ffffff;
+              font-weight: bold;
             }
           }
         }
       }
+    }
+    .nothing-message {
+      text-align: center;
+      font-size: 20px;
+      margin: 40px;
     }
     .item-container {
       display: flex;
