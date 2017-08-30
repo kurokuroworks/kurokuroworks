@@ -2,14 +2,16 @@
   <div>
     <header-parts></header-parts>
     <div class="container">
-      <div v-html="content"></div>
+      <div class="aaa"></div>
+      <div class="books-markdown" v-html="content"></div>
+      <div class="bbb"></div>
     </div>
     <footer-parts></footer-parts>
   </div>
 </template>
 
 <script>
-  import request from 'superagent'
+//  import request from 'superagent'
   import marked from 'marked'
   import HeaderParts from '~components/parts/header.vue'
   import FooterParts from '~components/parts/footer.vue'
@@ -39,7 +41,8 @@
         article = sessionStorage.getItem(`books/${context.params.id}`)
       }
       return Promise.resolve().then(() => {
-        return article ? article : request.get(`${context.env.staticBaseUrl}/www/books/${context.params.id}/${context.params.id}.md`).then(res => res.text)
+        return '準備中です'
+//        return article ? article : request.get(`${context.env.staticBaseUrl}/www/books/${context.params.id}/${context.params.id}.md`).then(res => res.text)
       }).then((res) => {
         if (context.isClient && sessionStorage) {
           if (!article) sessionStorage.setItem(`books/${context.params.id}`, res)
@@ -56,5 +59,13 @@
 </script>
 
 <style lang="scss">
-
+  .books-markdown {
+    .title {
+      font-size: 24px;
+      text-align: center;
+    }
+    .description {
+      /*float: left;*/
+    }
+  }
 </style>

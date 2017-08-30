@@ -14,8 +14,7 @@
               <li v-for="item in splittedMetaTag">{{item}}</li>
             </ul>
           </div>
-          <advertisement-parts></advertisement-parts>
-          <div class="markdown" v-html="content"></div>
+          <div class="articles-markdown" v-html="content"></div>
           <advertisement-parts></advertisement-parts>
         </div>
       </div>
@@ -144,7 +143,7 @@
         }
       }
     }
-    .markdown {
+    .articles-markdown {
       padding: 20px;
       max-width: 800px;
       margin: 0 auto;
