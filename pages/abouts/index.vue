@@ -31,7 +31,7 @@
                   :href="item.href"
                   :thumbnail="item.thumbnail"
                   :title="item.title"
-                  :meta="item.meta"
+                  :tag="item.tag"
                   :description="item.description"
                 ></item-parts>
               </template>
@@ -45,7 +45,7 @@
                   :href="item.href"
                   :thumbnail="item.thumbnail"
                   :title="item.title"
-                  :meta="item.meta"
+                  :tag="item.tag"
                 ></item-parts>
               </template>
             </ul>

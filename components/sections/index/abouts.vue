@@ -7,12 +7,12 @@
       </div>
       <div class="block">
         <div class="separator">
-          <h3>「かわいい！」を技術で作ります</h3>
+          <h3>技術で「かわいい！」を作ります</h3>
           <img src="~assets/images/chloe.png" />
           <div class="paragraph">
-            <p>"くろくろわーくす"は、かわいいものを作るために、もくもく活動している技術系サークルです。</p>
+            <p>"くろくろわーくす"は「かわいい！」を作るために、もくもく活動している技術系サークルです。</p>
             <p>Webアプリ開発、Androidアプリ開発、技術誌発行、デザイン、映像制作など多分野で雑多に作業しています。</p>
-            <p>かわいいは正義なので、かわいいと思うものに技術を注ぎ込みたいと思っています。</p>
+            <p>かわいいの定義は曖昧ですが、直感でかわいいと思うものに技術を注ぎ込みたいと思っています。</p>
           </div>
         </div>
         <button-parts
@@ -55,7 +55,7 @@
       }
       h3 {
         font-size: 2.5rem;
-        padding: 10px 0 15px;
+        padding: 10px 0 20px;
       }
       .paragraph {
         padding: 10px;

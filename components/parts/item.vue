@@ -7,7 +7,7 @@
           <div class="text">
             <h4 class="title">{{title}}</h4>
             <p class="description">{{description}}</p>
-            <ul class="meta-tag">
+            <ul class="tag">
               <li v-for="item in splittedMetaTag">{{item}}</li>
             </ul>
           </div>
@@ -19,7 +19,7 @@
           <div class="text">
             <h4 class="title">{{title}}</h4>
             <p class="description">{{description}}</p>
-            <ul class="meta-tag">
+            <ul class="tag">
               <li v-for="item in splittedMetaTag">{{item}}</li>
             </ul>
           </div>
@@ -31,7 +31,7 @@
           <div class="text">
             <h4 class="title">{{title}}</h4>
             <p class="description">{{description}}</p>
-            <ul class="meta-tag">
+            <ul class="tag">
               <li v-for="item in splittedMetaTag">{{item}}</li>
             </ul>
           </div>
@@ -43,10 +43,10 @@
 
 <script>
   export default {
-    props: ['type', 'id', 'href', 'thumbnail', 'title', 'meta', 'description'],
+    props: ['type', 'id', 'href', 'thumbnail', 'title', 'tag', 'description'],
     computed: {
       splittedMetaTag() {
-        return this.meta.split(',')
+        return this.tag.split(',')
       }
     }
   }
@@ -65,7 +65,7 @@
         line-height: 22px;
         margin-bottom: 3px;
       }
-      .meta-tag {
+      .tag {
         display: flex;
         flex-wrap: wrap;
         li {
@@ -77,7 +77,7 @@
           font-size: 14px;
         }
       }
-      .meta, .description {
+      .tag, .description {
         font-size: 15px;
         line-height: 18px;
         margin-bottom: 3px;

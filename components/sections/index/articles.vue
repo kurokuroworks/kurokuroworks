@@ -12,7 +12,7 @@
           :href="pickup.href"
           :thumbnail="pickup.thumbnail"
           :title="pickup.title"
-          :meta="pickup.meta"
+          :tag="pickup.tag"
           :description="pickup.description"
         ></item-parts>
         <li class="side-container">
@@ -26,7 +26,7 @@
             :href="item.href"
             :thumbnail="item.thumbnail"
             :title="item.title"
-            :meta="item.meta"
+            :tag="item.tag"
             :description="item.description"
           ></item-parts>
         </template>

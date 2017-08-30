@@ -2,7 +2,7 @@
   <div>
     <reset-parts />
     <div class="notify">
-      <p>くろくろわーくすは<strong>現在進行系で実装中</strong>です。一部表示が崩れたり、表示できないコンテンツがございます。(2017/08/30 16:00 更新)</p>
+      <p>くろくろわーくすは<strong>現在進行系で実装中</strong>です。一部表示が崩れたり、表示できないコンテンツがございます。(2017/08/30 23:00 更新)</p>
     </div>
     <nuxt/>
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -25,7 +25,11 @@
 
 <style lang="scss">
   .notify {
-    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
     background-color: #ff4a96;
     color: #ffffff;
     text-align: center;

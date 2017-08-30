@@ -31,7 +31,7 @@
               :href="item.href"
               :thumbnail="item.thumbnail"
               :title="item.title"
-              :meta="item.meta"
+              :tag="item.tag"
               :description="item.description"
             ></item-parts>
           </template>
@@ -79,7 +79,7 @@
             break
         }
         return this.articles.filter((item) => {
-          return item.meta.split(/\s*,\s*/).indexOf(targetTag) !== -1
+          return item.tag.split(/\s*,\s*/).indexOf(targetTag) !== -1
         })
       }
     },

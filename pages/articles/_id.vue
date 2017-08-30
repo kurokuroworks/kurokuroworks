@@ -37,7 +37,7 @@
     },
     computed: {
       splittedMetaTag() {
-        return this.meta.meta.split(',')
+        return this.meta.tag.split(',')
       }
     },
     validate(context) {

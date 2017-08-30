@@ -1,37 +1,37 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "2.nuxt.bundle.51082faaa2701694cc54.js",
+    "2.nuxt.bundle.90ffc4b84da42fce621d.js",
     "img/logo_white.8eff58f.png",
     "img/cover_welcome.b4d199f.jpg",
     "img/chloe.67ad6e3.png",
     "img/cover_abouts.b4d199f.jpg",
     "img/cover_apps.df25f17.jpg",
-    "0.nuxt.bundle.fdd849429269a3211fe1.js",
-    "1.nuxt.bundle.6b3bab86b5a56ff62dbd.js",
+    "0.nuxt.bundle.994d6cfd006ad0dffe6f.js",
+    "1.nuxt.bundle.ace381c1c105913c78ac.js",
     "img/ads.25eed29.jpg",
-    "3.nuxt.bundle.2ef9a0bb56c79761584e.js",
-    "4.nuxt.bundle.2e6c1845c9e77e1e6a1c.js",
-    "5.nuxt.bundle.a7ba257c27c45f434f13.js",
-    "6.nuxt.bundle.e801b6f783c62566ff52.js",
+    "3.nuxt.bundle.a16f468b65a45c4e4b09.js",
+    "4.nuxt.bundle.766ee9252c7b6144a3b0.js",
+    "5.nuxt.bundle.3252332ffc0dad782d73.js",
+    "6.nuxt.bundle.2f10125e4bd6323d86fb.js",
     "vendor.bundle.368cb2ef9a7c761867a0.js",
     "nuxt.bundle.bfe9f8cfd3981fd5a4d4.js",
-    "manifest.4fa159e4d4966aac7e56.js",
+    "manifest.da96a79dbb618eab3d5b.js",
     "index.html"
   ],
   "initial": [
-    "manifest.4fa159e4d4966aac7e56.js",
+    "manifest.da96a79dbb618eab3d5b.js",
     "vendor.bundle.368cb2ef9a7c761867a0.js",
     "nuxt.bundle.bfe9f8cfd3981fd5a4d4.js"
   ],
   "async": [
-    "2.nuxt.bundle.51082faaa2701694cc54.js",
-    "0.nuxt.bundle.fdd849429269a3211fe1.js",
-    "1.nuxt.bundle.6b3bab86b5a56ff62dbd.js",
-    "3.nuxt.bundle.2ef9a0bb56c79761584e.js",
-    "4.nuxt.bundle.2e6c1845c9e77e1e6a1c.js",
-    "5.nuxt.bundle.a7ba257c27c45f434f13.js",
-    "6.nuxt.bundle.e801b6f783c62566ff52.js"
+    "2.nuxt.bundle.90ffc4b84da42fce621d.js",
+    "0.nuxt.bundle.994d6cfd006ad0dffe6f.js",
+    "1.nuxt.bundle.ace381c1c105913c78ac.js",
+    "3.nuxt.bundle.a16f468b65a45c4e4b09.js",
+    "4.nuxt.bundle.766ee9252c7b6144a3b0.js",
+    "5.nuxt.bundle.3252332ffc0dad782d73.js",
+    "6.nuxt.bundle.2f10125e4bd6323d86fb.js"
   ],
   "modules": {
     "17865995": [
