@@ -13,12 +13,12 @@
       <div class="container">
         <div class="block">
           <div class="separator">
-            <h3>「かわいい！」を技術で作ります</h3>
+            <h3>技術で「かわいい！」を作ります</h3>
             <img src="~assets/images/chloe.png" />
             <div class="paragraph">
-              <p>"くろくろわーくす"は、かわいいものを作るために、もくもく活動している技術系サークルです。</p>
+              <p>"くろくろわーくす"は「かわいい！」を作るために、もくもく活動している技術系サークルです。</p>
               <p>Webアプリ開発、Androidアプリ開発、技術誌発行、デザイン、映像制作など多分野で雑多に作業しています。</p>
-              <p>かわいいは正義なので、かわいいと思うものに技術を注ぎ込みたいと思っています。</p>
+              <p>かわいいは正義なので、直感でかわいいと思うものに技術を注ぎ込みたいと思っています。</p>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@
           <div class="separator">
             <h3>お問い合わせ</h3>
             <div class="paragraph">
-              <p>サークル活動に関するご連絡は <strong>@nanocloudx</strong> まで twitter の DM をお願い致します。</p>
+              <p>ご質問やご連絡などありましたら <strong>@nanocloudx</strong> まで twitter の DM をお願い致します。</p>
             </div>
           </div>
         </div>
