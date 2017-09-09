@@ -9,9 +9,9 @@
           <li v-for="item in splittedMetaTag">{{item}}</li>
         </ul>
       </div>
-      <div class="books-markdown-description" v-html="bookDescription"></div>
-      <div class="books-markdown-sample" v-html="bookSample"></div>
-      <div class="books-markdown-overview" v-html="bookOverview"></div>
+      <book-description-section :data="bookDescription"></book-description-section>
+      <book-sample-section :data="bookSample"></book-sample-section>
+      <book-overview-section :data="bookOverview"></book-overview-section>
     </div>
     <footer-parts></footer-parts>
   </div>
@@ -22,10 +22,16 @@
   import marked from 'marked'
   import HeaderParts from '~components/parts/header.vue'
   import FooterParts from '~components/parts/footer.vue'
+  import BookDescriptionSection from '~components/sections/books/book-description.vue'
+  import BookSampleSection from '~components/sections/books/book-sample.vue'
+  import BookOverviewSection from '~components/sections/books/book-overview.vue'
   export default {
     components: {
       HeaderParts,
-      FooterParts
+      FooterParts,
+      BookDescriptionSection,
+      BookSampleSection,
+      BookOverviewSection
     },
     computed: {
       splittedMetaTag() {
@@ -88,7 +94,5 @@
 </script>
 
 <style lang="scss">
-  .books-markdown {
 
-  }
 </style>
