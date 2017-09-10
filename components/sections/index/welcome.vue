@@ -97,7 +97,7 @@
           width: 350px;
         }
       }
-      @media (min-width: 1100px) {
+      @media (min-width: 1095px) {
         .message {
           position: relative;
           text-align: left;

@@ -1,5 +1,7 @@
 <template>
-  <div class="book-overview" v-html="data"></div>
+  <div class="book-overview-section">
+    <div class="book-overview" v-html="data"></div>
+  </div>
 </template>
 
 <script>
@@ -9,5 +11,7 @@
 </script>
 
 <style lang="scss">
-
+  .book-overview-section {
+    margin-bottom: 50px;
+  }
 </style>

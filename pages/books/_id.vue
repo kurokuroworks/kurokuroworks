@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="book">
     <header-parts></header-parts>
     <div class="container">
       <div class="meta">
@@ -9,7 +9,7 @@
           <li v-for="item in splittedMetaTag">{{item}}</li>
         </ul>
       </div>
-      <book-description-section :data="bookDescription"></book-description-section>
+      <book-description-section :image="meta.thumbnail" :data="bookDescription"></book-description-section>
       <book-sample-section :data="bookSample"></book-sample-section>
       <book-overview-section :data="bookOverview"></book-overview-section>
     </div>
@@ -94,5 +94,40 @@
 </script>
 
 <style lang="scss">
-
+  .book {
+    .meta {
+      text-align: center;
+      padding: 80px 0 100px;
+      .meta-title {
+        font-size: 4rem;
+        margin: 10px;
+      }
+      .meta-description {
+        margin: 10px;
+      }
+      .meta-tag {
+        display: flex;
+        justify-content: center;
+        li {
+          border: 1px solid #4183C4;
+          border-radius: 1px;
+          padding: 0 5px;
+          margin: 1px 4px 1px 0;
+          color: #4183C4;
+          font-size: 14px;
+        }
+      }
+    }
+    h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 22px;
+      line-height: 26px;
+    }
+    p, li {
+      font-size: 18px;
+    }
+  }
 </style>
