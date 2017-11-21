@@ -18,7 +18,7 @@
     "lodash.slice": "^4.2.0",
     "lodash.throttle": "^4.1.1",
     "marked": "^0.3.6",
-    "nuxt": "latest",
+    "nuxt": "0.10.7",
     "superagent": "^3.5.2"
   },
   "devDependencies": {

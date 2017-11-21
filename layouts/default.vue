@@ -2,8 +2,7 @@
   <div>
     <reset-parts />
     <div class="notify">
-      <p>くろくろわーくすは<strong>現在進行系で実装中</strong>です。一部表示が崩れたり、表示できないコンテンツがございます。(2017/09/16 17:3
-        0 更新)</p>
+      <p>くろくろわーくすは<strong>未完成のサイト</strong>です。一部表示が崩れたり、表示できないコンテンツがございます。(2017/11/21 更新)</p>
     </div>
     <nuxt/>
     <link rel="stylesheet" href="/css/font-awesome.min.css">

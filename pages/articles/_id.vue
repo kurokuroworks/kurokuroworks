@@ -100,7 +100,7 @@
         margin-bottom: -100px;
       }
       @media screen and (min-width: 1095px) { // 1080 + 15
-        margin-bottom: -300px;
+        margin-bottom: -500px;
       }
       img {
         width: 100%;
