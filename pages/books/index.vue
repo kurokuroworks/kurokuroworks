@@ -43,6 +43,12 @@
       HeaderParts,
       FooterParts
     },
+    mounted() {
+      if (process.browser) {
+        window.ga('set', 'page', '/books')
+        window.ga('send', 'pageview')
+      }
+    },
     asyncData(context) {
       let booksData
       if (context.isClient && sessionStorage) {

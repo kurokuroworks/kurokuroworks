@@ -66,6 +66,12 @@
       HeaderParts,
       FooterParts
     },
+    mounted() {
+      if (process.browser) {
+        window.ga('set', 'page', '/abouts')
+        window.ga('send', 'pageview')
+      }
+    },
     asyncData(context) {
       let aboutsData
       if (context.isClient && sessionStorage) {

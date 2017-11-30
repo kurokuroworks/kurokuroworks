@@ -26,6 +26,12 @@
       AboutsSection,
       FooterParts
     },
+    mounted() {
+      if (process.browser) {
+        window.ga('set', 'page', '/')
+        window.ga('send', 'pageview')
+      }
+    },
     asyncData(context) {
       // NOTICE
       // static のリソースを更新した時は事前レンダリングしたHTMLも更新する必要がある。

@@ -56,6 +56,12 @@
       HeaderParts,
       FooterParts
     },
+    mounted() {
+      if (process.browser) {
+        window.ga('set', 'page', '/articles')
+        window.ga('send', 'pageview')
+      }
+    },
     computed: {
       filteredArticles() {
         if (!this.articles) {

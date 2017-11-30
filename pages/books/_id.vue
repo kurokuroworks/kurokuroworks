@@ -39,6 +39,10 @@
       }
     },
     validate(context) {
+      if (process.browser) {
+        window.ga('set', 'page', `/books/${context.params.id}`)
+        window.ga('send', 'pageview')
+      }
       let books
       if (context.isClient && sessionStorage) {
         books = JSON.parse(sessionStorage.getItem(`articlesData`))
