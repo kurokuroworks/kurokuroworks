@@ -13,12 +13,12 @@
       <div class="container">
         <div class="block">
           <div class="separator">
-            <h3>技術で「かわいい！」を作ります</h3>
+            <h3>ゆるふわ開発サークル「くろくろわーくす」</h3>
             <img src="~assets/images/chloe.png" />
             <div class="paragraph">
-              <p>"くろくろわーくす"は「かわいい！」を作るために、もくもく活動している技術系サークルです。</p>
-              <p>Webアプリ開発、Androidアプリ開発、技術誌発行、デザイン、映像制作など多分野で雑多に作業しています。</p>
-              <p>かわいいは正義なので、直感でかわいいと思うものに技術を注ぎ込みたいと思っています。</p>
+              <p>"くろくろわーくす"はゆるふわに活動している技術系サークルです。</p>
+              <p>Webアプリ開発、技術誌発行、映像制作など雑多に作業しています。</p>
+              <p>直感でかわいいと思うものに技術を注ぎ込みたいと思っています。</p>
             </div>
           </div>
         </div>
@@ -98,9 +98,9 @@
     padding-bottom: 50px;
     .abouts-header {
       text-align: center;
-      background-color: #444444;
-      background-size: cover;
-      background-repeat: no-repeat;
+      background-color: #555555;
+      background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 4px);
+      background-size: 6px 6px;
       color: #ffffff;
       .section-title {
         padding: 100px 0 40px;

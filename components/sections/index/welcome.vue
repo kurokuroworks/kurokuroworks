@@ -6,7 +6,7 @@
           <img src="~assets/images/logo_white.png" />
         </h1>
         <div class="message">
-          <h2>「かわいいは正義」</h2>
+          <h2>「かわいいは正義！」</h2>
           <p>ゆるふわ開発サークル"くろくろわーくす"</p>
         </div>
         <img class="chloe" src="~assets/images/chloe.png" />
@@ -120,6 +120,8 @@
     .cutter {
       position: relative;
       background-color: #555555;
+      background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 4px);
+      background-size: 6px 6px;
       width: 120%;
       height: 200px;
       margin: 0 -10% -150px;

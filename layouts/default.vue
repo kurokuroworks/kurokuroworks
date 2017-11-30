@@ -21,16 +21,6 @@
 </script>
 
 <style lang="scss">
-  .notify {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-    background-color: #ff4a96;
-    color: #ffffff;
-    text-align: center;
-  }
   @font-face {
     font-family: 'JK Gothic M';
     font-style: normal;

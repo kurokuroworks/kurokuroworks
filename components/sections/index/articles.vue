@@ -6,19 +6,6 @@
         <p>Articles</p>
       </div>
       <ul class="item-container">
-        <item-parts
-          :type="'articles'"
-          :id="pickup.id"
-          :href="pickup.href"
-          :thumbnail="pickup.thumbnail"
-          :title="pickup.title"
-          :tag="pickup.tag"
-          :description="pickup.description"
-        ></item-parts>
-        <li class="side-container">
-          <p class="sticker">スポンサーリンク</p>
-          <advertisement-parts></advertisement-parts>
-        </li>
         <template v-for="item in articles">
           <item-parts
             :type="'articles'"
@@ -52,11 +39,8 @@
       AdvertisementParts
     },
     computed: {
-      pickup() {
-        return this.data[0]
-      },
       articles() {
-        return slice(this.data, 1, 7)
+        return slice(this.data, 0, 6)
       }
     }
   }
@@ -78,28 +62,6 @@
           background-color: #ffffff;
         }
         @media screen and (min-width: 735px) { // 720 + 15
-          width: 360px;
-          &:first-child {
-            width: 720px;
-          }
-        }
-      }
-      .side-container {
-        .sticker {
-          position: absolute;
-          right: 10px;
-          bottom: 0;
-          font-size: 12px;
-        }
-        position: relative;
-        background-color: #ffffff;
-        width: 100%;
-        margin: 10px 0;
-        padding-bottom: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        @media (min-width:1095px) {
           width: 360px;
         }
       }

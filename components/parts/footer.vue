@@ -14,7 +14,7 @@
   footer {
     background-color: #555555;
     color: #ffffff;
-    padding: 15px 20px 40px;
+    padding: 15px 20px;
     text-align: center;
     .title {
       width: 160px;

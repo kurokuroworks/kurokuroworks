@@ -74,9 +74,9 @@
     padding-bottom: 50px;
     .books-header {
       text-align: center;
-      background-color: #444444;
-      background-size: cover;
-      background-repeat: no-repeat;
+      background-color: #555555;
+      background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 4px);
+      background-size: 6px 6px;
       color: #ffffff;
       .section-title {
         padding: 100px 0 40px;

@@ -11,8 +11,9 @@
 
 <style lang="scss">
   .ads-container {
+    display: none;
+    /*display: flex;*/
     position: relative;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     .ads {
