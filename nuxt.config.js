@@ -69,10 +69,5 @@ module.exports = {
         return [].concat(urls[0],urls[1])
       })
     }
-  },
-  modules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-82809079-1'
-    }]
-  ]
+  }
 }
