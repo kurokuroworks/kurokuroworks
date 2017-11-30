@@ -70,7 +70,9 @@ module.exports = {
       })
     }
   },
-  plugins: [
-    { src: '~plugins/ga.js', ssr: false }
+  modules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-82809079-1'
+    }]
   ]
 }
