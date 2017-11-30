@@ -1,18 +1,18 @@
 <template>
   <div class="book">
     <header-parts></header-parts>
-    <div class="container">
-      <div class="meta">
+    <div class="meta">
+      <div class="container">
         <h1 class="meta-title">{{meta.title}}</h1>
         <p class="meta-description">{{meta.description}}</p>
         <ul class="meta-tag">
           <li v-for="item in splittedMetaTag">{{item}}</li>
         </ul>
       </div>
-      <book-description-section :image="meta.thumbnail" :data="bookDescription"></book-description-section>
-      <book-sample-section :data="bookSample"></book-sample-section>
-      <book-overview-section :data="bookOverview"></book-overview-section>
     </div>
+    <book-description-section :image="meta.thumbnail" :data="bookDescription"></book-description-section>
+    <book-sample-section :data="bookSample"></book-sample-section>
+    <book-overview-section :data="bookOverview"></book-overview-section>
     <footer-parts></footer-parts>
   </div>
 </template>
@@ -95,6 +95,9 @@
 
 <style lang="scss">
   .book {
+    .container {
+      padding: 0 15px;
+    }
     .meta {
       text-align: center;
       padding: 80px 0 100px;

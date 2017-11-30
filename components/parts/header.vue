@@ -80,6 +80,7 @@
     }
     nav {
       background-color: rgba(0,0,0,0.3);
+      margin: 0 -15px;
       ul {
         display: flex;
         justify-content: center;

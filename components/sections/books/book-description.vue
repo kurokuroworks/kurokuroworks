@@ -1,7 +1,9 @@
 <template>
   <div class="book-description-section">
-    <img class="book-description-section-thumbnail" :src="image">
-    <div class="book-description-section-data" v-html="data"></div>
+    <div class="container">
+      <img class="book-description-section-thumbnail" :src="image">
+      <div class="book-description-section-data" v-html="data"></div>
+    </div>
   </div>
 </template>
 

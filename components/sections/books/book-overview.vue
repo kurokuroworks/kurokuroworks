@@ -1,6 +1,8 @@
 <template>
   <div class="book-overview-section">
-    <div class="book-overview" v-html="data"></div>
+    <div class="container">
+      <div class="book-overview" v-html="data"></div>
+    </div>
   </div>
 </template>
 
