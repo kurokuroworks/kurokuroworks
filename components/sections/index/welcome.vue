@@ -6,7 +6,7 @@
           <img src="~assets/images/logo_white.png" />
         </h1>
         <div class="message">
-          <h2>「かわいい！」を作りたい</h2>
+          <h2>「かわいいは正義」</h2>
           <p>ゆるふわ開発サークル"くろくろわーくす"</p>
         </div>
         <img class="chloe" src="~assets/images/chloe.png" />

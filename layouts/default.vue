@@ -1,9 +1,6 @@
 <template>
   <div>
     <reset-parts />
-    <div class="notify">
-      <p>くろくろわーくすは<strong>未完成のサイト</strong>です。一部表示が崩れたり、表示できないコンテンツがございます。(2017/11/21 更新)</p>
-    </div>
     <nuxt/>
     <link rel="stylesheet" href="/css/font-awesome.min.css">
   </div>

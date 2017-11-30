@@ -37,23 +37,6 @@
               </template>
             </ul>
           </div>
-          <div class="separator contributor">
-            <h3 class="subtitle">Special thanks!</h3>
-            <ul class="item-container">
-              <template v-for="item in contributor">
-                <item-parts
-                  :href="item.href"
-                  :thumbnail="item.thumbnail"
-                  :title="item.title"
-                  :tag="item.tag"
-                ></item-parts>
-              </template>
-            </ul>
-            <div class="paragraph">
-              <p>"くろくろわーくす"では、かわいいものに魂を吹き込むエンジニア、かわいい絵が描けるイラストレーターを募集しています。</p>
-              <p>同人活動に興味があり、一緒に作ってみたい方はお気軽にご連絡をお待ちしております（ ＾ω＾）</p>
-            </div>
-          </div>
         </div>
         <div class="block">
           <div class="separator">
