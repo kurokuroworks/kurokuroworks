@@ -23,10 +23,10 @@
           </div>
         </div>
         <div class="block">
-          <div class="separator staff">
+          <div class="separator member">
             <h3 class="subtitle">サークルのなかのひと</h3>
             <ul class="item-container">
-              <template v-for="item in staff">
+              <template v-for="item in member">
                 <item-parts
                   :href="item.href"
                   :thumbnail="item.thumbnail"
@@ -79,8 +79,7 @@
           if (!aboutsData) sessionStorage.setItem('aboutsData', results[0])
         }
         return {
-          staff: JSON.parse(results[0])[0], // TODO わけがわからんので直したほうがいいかも。
-          contributor: JSON.parse(results[0])[1]
+          member: JSON.parse(results[0])
         }
       })
     },
@@ -132,7 +131,7 @@
       .paragraph {
         padding: 10px;
       }
-      .staff {
+      .member {
         .item-container {
           display: flex;
           flex-direction: column;
@@ -158,31 +157,6 @@
           }
           @media (min-width:1095px) {
             flex-direction: row;
-          }
-        }
-      }
-      .contributor {
-        .item-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          .item-parts {
-            width: 50%;
-            max-width: 135px;
-            padding: 10px;
-            margin-bottom: 10px;
-            .text {
-              box-shadow: none;
-            }
-            img {
-              max-height: 135px;
-              margin: 0 auto;
-            }
-          }
-          @media screen and (min-width: 735px) { // 720 + 15
-            .item-parts {
-              text-align: left;
-            }
           }
         }
       }
