@@ -69,5 +69,8 @@ module.exports = {
         return [].concat(urls[0],urls[1])
       })
     }
-  }
+  },
+  plugins: [
+    { src: '~plugins/ga.js', ssr: false }
+  ]
 }
