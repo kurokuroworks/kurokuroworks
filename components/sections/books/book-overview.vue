@@ -15,5 +15,8 @@
 <style lang="scss">
   .book-overview-section {
     margin-bottom: 50px;
+    a {
+      color: #33bbff;
+    }
   }
 </style>
